@@ -1,0 +1,196 @@
+<resource xmlns="http://midpoint.evolveum.com/xml/ns/public/common/common-3" xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3" xmlns:icfs="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/resource-schema-3" xmlns:org="http://midpoint.evolveum.com/xml/ns/public/common/org-3" xmlns:q="http://prism.evolveum.com/xml/ns/public/query-3" xmlns:ri="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3" xmlns:t="http://prism.evolveum.com/xml/ns/public/types-3" oid="130a6c02-df1a-4324-a848-65fea3db6a71" version="29">
+    <name>AD</name>
+    <metadata>
+        <modifyTimestamp>2023-06-01T10:12:17.330Z</modifyTimestamp>
+        <modifierRef oid="00000000-0000-0000-0000-000000000002" relation="org:default" type="c:UserType">
+            <!-- administrator -->
+        </modifierRef>
+        <modifyChannel>http://midpoint.evolveum.com/xml/ns/public/gui/channels-3#user</modifyChannel>
+    </metadata>
+    <operationExecution id="10">
+        <timestamp>2023-03-14T10:09:56.216Z</timestamp>
+        <operation>
+            <objectDelta>
+                <t:changeType>modify</t:changeType>
+                <t:objectType>c:ResourceType</t:objectType>
+            </objectDelta>
+            <executionResult>
+                <operation>com.evolveum.midpoint.model.impl.lens.ChangeExecutor.executeDelta</operation>
+                <status>success</status>
+                <importance>normal</importance>
+                <token>1000000000004021957</token>
+            </executionResult>
+            <objectName>AD</objectName>
+        </operation>
+        <status>success</status>
+        <initiatorRef oid="00000000-0000-0000-0000-000000000002" relation="org:default" type="c:UserType">
+            <!-- administrator -->
+        </initiatorRef>
+        <channel>http://midpoint.evolveum.com/xml/ns/public/gui/channels-3#user</channel>
+    </operationExecution>
+    <operationExecution id="11">
+        <timestamp>2023-05-29T10:10:19.482Z</timestamp>
+        <operation>
+            <objectDelta>
+                <t:changeType>modify</t:changeType>
+                <t:objectType>c:ResourceType</t:objectType>
+            </objectDelta>
+            <executionResult>
+                <operation>com.evolveum.midpoint.model.impl.lens.ChangeExecutor.executeDelta</operation>
+                <status>success</status>
+                <importance>normal</importance>
+                <token>1000000000000275295</token>
+            </executionResult>
+            <objectName>AD</objectName>
+        </operation>
+        <status>success</status>
+        <initiatorRef oid="00000000-0000-0000-0000-000000000002" relation="org:default" type="c:UserType">
+            <!-- administrator -->
+        </initiatorRef>
+        <channel>http://midpoint.evolveum.com/xml/ns/public/gui/channels-3#user</channel>
+    </operationExecution>
+    <operationExecution id="12">
+        <timestamp>2023-05-30T13:54:32.698Z</timestamp>
+        <operation>
+            <objectDelta>
+                <t:changeType>modify</t:changeType>
+                <t:objectType>c:ResourceType</t:objectType>
+            </objectDelta>
+            <executionResult>
+                <operation>com.evolveum.midpoint.model.impl.lens.ChangeExecutor.executeDelta</operation>
+                <status>success</status>
+                <importance>normal</importance>
+                <token>1000000000001731685</token>
+            </executionResult>
+            <objectName>AD</objectName>
+        </operation>
+        <status>success</status>
+        <initiatorRef oid="00000000-0000-0000-0000-000000000002" relation="org:default" type="c:UserType">
+            <!-- administrator -->
+        </initiatorRef>
+        <channel>http://midpoint.evolveum.com/xml/ns/public/gui/channels-3#user</channel>
+    </operationExecution>
+    <operationExecution id="13">
+        <timestamp>2023-05-30T13:58:28.122Z</timestamp>
+        <status>success</status>
+        <initiatorRef oid="00000000-0000-0000-0000-000000000002" relation="org:default" type="c:UserType">
+            <!-- administrator -->
+        </initiatorRef>
+        <channel>http://midpoint.evolveum.com/xml/ns/public/gui/channels-3#user</channel>
+    </operationExecution>
+    <operationExecution id="14">
+        <timestamp>2023-06-01T10:13:12.092Z</timestamp>
+        <operation>
+            <objectDelta>
+                <t:changeType>modify</t:changeType>
+                <t:objectType>c:ResourceType</t:objectType>
+            </objectDelta>
+            <executionResult>
+                <operation>com.evolveum.midpoint.model.impl.lens.ChangeExecutor.executeDelta</operation>
+                <status>success</status>
+                <importance>normal</importance>
+                <token>1000000000000036379</token>
+            </executionResult>
+            <objectName>AD</objectName>
+        </operation>
+        <status>success</status>
+        <initiatorRef oid="00000000-0000-0000-0000-000000000002" relation="org:default" type="c:UserType">
+            <!-- administrator -->
+        </initiatorRef>
+        <channel>http://midpoint.evolveum.com/xml/ns/public/gui/channels-3#user</channel>
+    </operationExecution>
+    <iteration>0</iteration>
+    <iterationToken/>
+    <operationalState>
+        <lastAvailabilityStatus>down</lastAvailabilityStatus>
+    </operationalState>
+    <connectorRef oid="f943e022-2f4f-44af-b98c-c1bd35172bad" relation="org:default" type="c:ConnectorType">
+        <!-- ConnId com.evolveum.polygon.connector.ldap.ad.AdLdapConnector v2.4.1 -->
+    </connectorRef>
+    <connectorConfiguration xmlns:icfc="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/connector-schema-3">
+        <icfc:resultsHandlerConfiguration>
+            <icfc:enableNormalizingResultsHandler>false</icfc:enableNormalizingResultsHandler>
+            <icfc:filteredResultsHandlerInValidationMode>true</icfc:filteredResultsHandlerInValidationMode>
+            <icfc:enableAttributesToGetSearchResultsHandler>false</icfc:enableAttributesToGetSearchResultsHandler>
+        </icfc:resultsHandlerConfiguration>
+        <icfc:configurationProperties xmlns:gen257="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/bundle/com.evolveum.polygon.connector-ldap/com.evolveum.polygon.connector.ldap.ad.AdLdapConnector">
+            <gen257:host>10.200.110.16</gen257:host>
+            <gen257:port>636</gen257:port>
+            <gen257:bindDn>CN=Icrypto Integration,OU=Service Accounts,DC=QA,DC=stgppsdmn,DC=co,DC=za</gen257:bindDn>
+            <gen257:bindPassword>
+                <t:encryptedData>
+                    <t:encryptionMethod>
+                        <t:algorithm>http://www.w3.org/2001/04/xmlenc#aes256-cbc</t:algorithm>
+                    </t:encryptionMethod>
+                    <t:keyInfo>
+                        <t:keyName>RyqsYGHc2oDY/R1jDCJy6wr8vOs=</t:keyName>
+                    </t:keyInfo>
+                    <t:cipherData>
+                        <t:cipherValue>AukxXVwZt7kF2u2bTw6Gz+Blc+tgPQtQQ86GXAEyfF0f11fcQaTh42kXK9HWLvM3</t:cipherValue>
+                    </t:cipherData>
+                </t:encryptedData>
+            </gen257:bindPassword>
+            <gen257:baseContext>CN=Users,DC=QA,DC=stgppsdmn,DC=co,DC=za</gen257:baseContext>
+            <gen257:uidAttribute>objectGUID</gen257:uidAttribute>
+            <gen257:allowUntrustedSsl>true</gen257:allowUntrustedSsl>
+            <gen257:userObjectClass>user</gen257:userObjectClass>
+        </icfc:configurationProperties>
+    </connectorConfiguration>
+    <schema>
+        <!-- TODO: schema not included since it's 400 000 lines long, gotta figure out solution  -->
+    </schema>
+    <schemaHandling>
+        <objectType id="6">
+            <kind>account</kind>
+            <default>true</default>
+            <objectClass>ri:user</objectClass>
+        </objectType>
+    </schemaHandling>
+    <capabilities>
+        <cachingMetadata>
+            <retrievalTimestamp>2023-03-14T09:35:08.546Z</retrievalTimestamp>
+            <serialNumber>4aaadd7d13a92787-f92de6586bcb0ca</serialNumber>
+        </cachingMetadata>
+        <native xmlns:cap="http://midpoint.evolveum.com/xml/ns/public/resource/capabilities-3">
+            <cap:schema/>
+            <cap:liveSync/>
+            <cap:testConnection/>
+            <cap:create/>
+            <cap:update>
+                <cap:delta>true</cap:delta>
+                <cap:addRemoveAttributeValues>true</cap:addRemoveAttributeValues>
+            </cap:update>
+            <cap:delete/>
+            <cap:script>
+                <cap:host>
+                    <cap:type>resource</cap:type>
+                </cap:host>
+                <cap:host>
+                    <cap:type>connector</cap:type>
+                </cap:host>
+            </cap:script>
+            <cap:activation>
+                <cap:status/>
+            </cap:activation>
+            <cap:credentials>
+                <cap:password>
+                    <cap:returnedByDefault>false</cap:returnedByDefault>
+                </cap:password>
+            </cap:credentials>
+            <cap:auxiliaryObjectClasses/>
+            <cap:pagedSearch/>
+            <cap:read>
+                <cap:returnDefaultAttributesOption>true</cap:returnDefaultAttributesOption>
+            </cap:read>
+        </native>
+    </capabilities>
+    <synchronization>
+        <objectSynchronization>
+            <objectClass>user</objectClass>
+            <kind>account</kind>
+            <focusType>c:UserType</focusType>
+            <enabled>true</enabled>
+            <reconcile>false</reconcile>
+        </objectSynchronization>
+    </synchronization>
+</resource>

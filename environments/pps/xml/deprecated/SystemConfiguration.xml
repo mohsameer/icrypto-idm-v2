@@ -1,0 +1,39 @@
+<systemConfiguration xmlns="http://midpoint.evolveum.com/xml/ns/public/common/common-3" xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3" xmlns:icfs="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/resource-schema-3" xmlns:org="http://midpoint.evolveum.com/xml/ns/public/common/org-3" xmlns:q="http://prism.evolveum.com/xml/ns/public/query-3" xmlns:ri="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3" xmlns:t="http://prism.evolveum.com/xml/ns/public/types-3" oid="00000000-0000-0000-0000-000000000001">
+    <name>SystemConfiguration</name>
+    <deploymentInformation>
+        <headerColor>DodgerBlue</headerColor>
+        <skin>skin-black</skin>
+        <customerName>iCrypto</customerName>
+        <customerUrl>https://icrypto.com</customerUrl>
+        <partnerName>iCrypto Inc.</partnerName>
+        <partnerUrl>https://icrypto.com</partnerUrl>
+        <systemName>iCrypto-IDM</systemName>
+        <logo>
+            <imageUrl>static-web/icrypto.png</imageUrl>
+        </logo>
+    </deploymentInformation>
+    <defaultObjectPolicyConfiguration>
+        <objectTemplateRef oid="c0c010c0-d34d-b33f-f00d-777222222333"
+                           type="c:ObjectTemplateType">
+        </objectTemplateRef>
+        <type>c:UserType</type>
+    </defaultObjectPolicyConfiguration>
+    <globalSecurityPolicyRef oid="00000000-0000-0000-0000-000000000120"/>
+    <modelHooks>
+        <change>
+            <hook>
+                <name>Setup OID from icryptoUserId hook</name>
+                <state>primary</state>
+                <focusType>c:UserType</focusType>
+                <script>
+                    <code>
+                        icryptoUserId = ((String) focus.asPrismObject().findExtensionItem("icryptoUserId").getRealValue())
+                        if(icryptoUserId != null) {
+                            focus.setOid(icryptoUserId)
+                        }
+                    </code>
+                </script>
+            </hook>
+        </change>
+    </modelHooks>
+</systemConfiguration>

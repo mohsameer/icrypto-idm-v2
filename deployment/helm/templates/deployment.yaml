@@ -1,0 +1,95 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "idm.fullname" . }}
+  labels:
+    {{- include "idm.labels" . | nindent 4 }}
+spec:
+  {{- if not .Values.autoscaling.enabled }}
+  replicas: {{ .Values.replicaCount }}
+  {{- end }}
+  selector:
+    matchLabels:
+      {{- include "idm.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      {{- with .Values.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      labels:
+        {{- include "idm.selectorLabels" . | nindent 8 }}
+    spec:
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      serviceAccountName: {{ include "idm.serviceAccountName" . }}
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      containers:
+        - name: {{ .Chart.Name }}
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+            - name: REPO_DATABASE_TYPE
+              value: postgresql
+            - name: REPO_HOST
+              value: {{ .Values.database.url }}
+            - name: REPO_DATABASE
+              value: midpoint
+            - name: REPO_USER
+              value: {{ .Values.database.username }}
+            - name: REPO_PASSWORD_FILE
+              value: /etc/secrets/mp_database_password.txt
+            - name: REPO_MISSING_SCHEMA_ACTION
+              value:
+            - name: REPO_UPGRADEABLE_SCHEMA_ACTION
+              value:
+            - name: REPO_SCHEMA_VERSION_IF_MISSING
+              value:
+            - name: REPO_SCHEMA_VARIANT
+              value:
+          ports:
+            - name: http
+              containerPort: 8080
+              protocol: TCP
+          # livenessProbe:
+          #   httpGet:
+          #     path: /
+          #     port: http
+          # readinessProbe:
+          #   httpGet:
+          #     path: /
+          #     port: http
+          volumeMounts:
+            - mountPath: "/etc/secrets/"
+              name: mp-database-password
+              readOnly: true
+            - mountPath: "/opt/midpoint/var/keystore.jceks"
+              subPath: keystore.jceks
+              name: mp-keystore
+              readOnly: true
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+      volumes:
+        - name: mp-database-password
+          secret:
+            secretName: idm-db-password     
+        - name: mp-keystore
+          secret:
+            secretName: idm-keystore
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}

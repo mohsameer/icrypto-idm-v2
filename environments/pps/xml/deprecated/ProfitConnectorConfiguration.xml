@@ -1,0 +1,302 @@
+<resource xmlns="http://midpoint.evolveum.com/xml/ns/public/common/common-3" xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3" xmlns:icfs="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/resource-schema-3" xmlns:org="http://midpoint.evolveum.com/xml/ns/public/common/org-3" xmlns:q="http://prism.evolveum.com/xml/ns/public/query-3" xmlns:ri="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3" xmlns:t="http://prism.evolveum.com/xml/ns/public/types-3" oid="b3d2aa73-ba30-4a8c-986f-e0d577944484" version="28">
+    <name>PRO-FiT-DB</name>
+    <metadata>
+        <requestTimestamp>2022-06-30T10:18:29.793Z</requestTimestamp>
+        <requestorRef oid="00000000-0000-0000-0000-000000000002" relation="org:default" type="c:UserType">
+            <!-- administrator -->
+        </requestorRef>
+        <createTimestamp>2022-06-30T10:18:29.880Z</createTimestamp>
+        <creatorRef oid="00000000-0000-0000-0000-000000000002" relation="org:default" type="c:UserType">
+            <!-- administrator -->
+        </creatorRef>
+        <createChannel>http://midpoint.evolveum.com/xml/ns/public/gui/channels-3#user</createChannel>
+        <modifyTimestamp>2022-06-30T10:24:48.511Z</modifyTimestamp>
+        <modifierRef oid="00000000-0000-0000-0000-000000000002" relation="org:default" type="c:UserType">
+            <!-- administrator -->
+        </modifierRef>
+        <modifyChannel>http://midpoint.evolveum.com/xml/ns/public/gui/channels-3#user</modifyChannel>
+    </metadata>
+    <operationExecution id="16">
+        <timestamp>2022-06-30T10:19:59.589Z</timestamp>
+        <status>success</status>
+        <initiatorRef oid="00000000-0000-0000-0000-000000000002" relation="org:default" type="c:UserType">
+            <!-- administrator -->
+        </initiatorRef>
+        <channel>http://midpoint.evolveum.com/xml/ns/public/gui/channels-3#user</channel>
+    </operationExecution>
+    <operationExecution id="17">
+        <timestamp>2022-06-30T10:23:14.952Z</timestamp>
+        <operation>
+            <objectDelta>
+                <t:changeType>modify</t:changeType>
+                <t:objectType>c:ResourceType</t:objectType>
+            </objectDelta>
+            <executionResult>
+                <operation>com.evolveum.midpoint.model.impl.lens.ChangeExecutor.executeDelta</operation>
+                <status>success</status>
+                <importance>normal</importance>
+                <token>1000000000000002433</token>
+            </executionResult>
+            <objectName>PRO-FiT-DB</objectName>
+        </operation>
+        <status>success</status>
+        <initiatorRef oid="00000000-0000-0000-0000-000000000002" relation="org:default" type="c:UserType">
+            <!-- administrator -->
+        </initiatorRef>
+        <channel>http://midpoint.evolveum.com/xml/ns/public/gui/channels-3#user</channel>
+    </operationExecution>
+    <operationExecution id="19">
+        <timestamp>2022-06-30T10:23:43.944Z</timestamp>
+        <operation>
+            <objectDelta>
+                <t:changeType>modify</t:changeType>
+                <t:objectType>c:ResourceType</t:objectType>
+            </objectDelta>
+            <executionResult>
+                <operation>com.evolveum.midpoint.model.impl.lens.ChangeExecutor.executeDelta</operation>
+                <status>success</status>
+                <importance>normal</importance>
+                <token>1000000000000002476</token>
+            </executionResult>
+            <objectName>PRO-FiT-DB</objectName>
+        </operation>
+        <status>success</status>
+        <initiatorRef oid="00000000-0000-0000-0000-000000000002" relation="org:default" type="c:UserType">
+            <!-- administrator -->
+        </initiatorRef>
+        <channel>http://midpoint.evolveum.com/xml/ns/public/gui/channels-3#user</channel>
+    </operationExecution>
+    <operationExecution id="20">
+        <timestamp>2022-06-30T10:24:37.218Z</timestamp>
+        <operation>
+            <objectDelta>
+                <t:changeType>modify</t:changeType>
+                <t:objectType>c:ResourceType</t:objectType>
+            </objectDelta>
+            <executionResult>
+                <operation>com.evolveum.midpoint.model.impl.lens.ChangeExecutor.executeDelta</operation>
+                <status>success</status>
+                <importance>normal</importance>
+                <token>1000000000000010929</token>
+            </executionResult>
+            <objectName>PRO-FiT-DB</objectName>
+        </operation>
+        <status>success</status>
+        <initiatorRef oid="00000000-0000-0000-0000-000000000002" relation="org:default" type="c:UserType">
+            <!-- administrator -->
+        </initiatorRef>
+        <channel>http://midpoint.evolveum.com/xml/ns/public/gui/channels-3#user</channel>
+    </operationExecution>
+    <operationExecution id="21">
+        <timestamp>2022-06-30T10:24:52.283Z</timestamp>
+        <operation>
+            <objectDelta>
+                <t:changeType>modify</t:changeType>
+                <t:objectType>c:ResourceType</t:objectType>
+            </objectDelta>
+            <executionResult>
+                <operation>com.evolveum.midpoint.model.impl.lens.ChangeExecutor.executeDelta</operation>
+                <status>success</status>
+                <importance>normal</importance>
+                <token>1000000000000013142</token>
+            </executionResult>
+            <objectName>PRO-FiT-DB</objectName>
+        </operation>
+        <status>success</status>
+        <initiatorRef oid="00000000-0000-0000-0000-000000000002" relation="org:default" type="c:UserType">
+            <!-- administrator -->
+        </initiatorRef>
+        <channel>http://midpoint.evolveum.com/xml/ns/public/gui/channels-3#user</channel>
+    </operationExecution>
+    <iteration>0</iteration>
+    <iterationToken/>
+    <operationalState>
+        <lastAvailabilityStatus>up</lastAvailabilityStatus>
+    </operationalState>
+    <connectorRef relation="org:default" type="c:ConnectorType">
+        <!-- ConnId com.icrypto.connector.profit.ProfitConnector v0.0.1-SNAPSHOT -->
+        <filter>
+            <q:equal>
+                <q:path>connectorType</q:path>
+                <q:value>com.icrypto.connector.profit.ProfitConnector</q:value>
+            </q:equal>
+        </filter>
+    </connectorRef>
+    <connectorConfiguration xmlns:icfc="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/connector-schema-3">
+        <icfc:configurationProperties xmlns:gen58="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/bundle/com.evolveum.polygon.pps-profit-connector/com.icrypto.connector.profit.ProfitConnector">
+            <gen58:userAttributes>dn,sn,cn,uid,identitynumber,mail,memberno,partyid,mobile</gen58:userAttributes>
+            <gen58:userCreateServiceAddress>http://10.200.110.173:9080/PPS_IDM_Service/services/PPS_IDM_ServicePort</gen58:userCreateServiceAddress>
+            <gen58:roleMemberFilter>(member={0})</gen58:roleMemberFilter>
+            <gen58:bindDN>uid=svc_icrypto,cn=admins,secauthority=default</gen58:bindDN>
+            <gen58:roleBase>ou=Roles,dc=ppspar,DC=PPSDMN</gen58:roleBase>
+            <gen58:serviceHost>10.200.110.173</gen58:serviceHost>
+            <gen58:roleName>CN</gen58:roleName>
+            <gen58:customAttributeNames>partyId</gen58:customAttributeNames>
+            <gen58:servicePort>1389</gen58:servicePort>
+            <gen58:baseDN>ou=Users,dc=ppspar,DC=PPSDMN</gen58:baseDN>
+            <gen58:basePolicyDN>cn=Users,SECAUTHORITY=DEFAULT</gen58:basePolicyDN>
+            <gen58:servicePrefix>ldap://</gen58:servicePrefix>
+            <gen58:serviceAddress>ldap://10.200.110.173:1389</gen58:serviceAddress>
+        </icfc:configurationProperties>
+    </connectorConfiguration>
+    <xsd:sequence>
+        <xsd:element name="saID" type="xsd:string">
+            <xsd:annotation>
+                <xsd:appinfo>
+                    <a:displayOrder>110</a:displayOrder>
+                    <a:access>create</a:access>
+                    <a:access>read</a:access>
+                    <ra:nativeAttributeName>saID</ra:nativeAttributeName>
+                    <ra:frameworkAttributeName>__NAME__</ra:frameworkAttributeName>
+                </xsd:appinfo>
+            </xsd:annotation>
+        </xsd:element>
+        <xsd:element minOccurs="0" name="profitData" type="xsd:string">
+            <xsd:annotation>
+                <xsd:appinfo>
+                    <a:displayOrder>140</a:displayOrder>
+                    <a:access>read</a:access>
+                    <ra:frameworkAttributeName>profitData</ra:frameworkAttributeName>
+                </xsd:appinfo>
+            </xsd:annotation>
+        </xsd:element>
+        <xsd:element minOccurs="0" ref="icfs:uid">
+            <xsd:annotation>
+                <xsd:appinfo>
+                    <a:displayName>ConnId UID</a:displayName>
+                    <a:displayOrder>100</a:displayOrder>
+                    <a:access>read</a:access>
+                </xsd:appinfo>
+            </xsd:annotation>
+        </xsd:element>
+    </xsd:sequence>
+</xsd:complexType>
+        </xsd:schema>
+        </definition>
+        </schema>
+<schemaHandling>
+<!-- TODO: missing params, update from QA or PROD -->
+<objectType id="4">
+    <kind>account</kind>
+    <default>true</default>
+    <objectClass>ri:AccountObjectClass</objectClass>
+    <attribute id="5">
+        <c:ref xmlns:ri="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3">ri:saID</c:ref>
+        <tolerant>true</tolerant>
+        <exclusiveStrong>false</exclusiveStrong>
+        <outbound>
+            <name>saIDout</name>
+            <authoritative>true</authoritative>
+            <exclusive>false</exclusive>
+            <strength>normal</strength>
+            <expression>
+                <c:path xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="t:ItemPathType">$user/extension/saID</c:path>
+            </expression>
+        </outbound>
+        <inbound id="18">
+            <authoritative>true</authoritative>
+            <exclusive>false</exclusive>
+            <strength>normal</strength>
+            <expression>
+                <script xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3" xsi:type="c:ScriptExpressionEvaluatorType">
+                    <code>
+                        return input.toString().trim();
+                    </code>
+                </script>
+            </expression>
+            <target>
+                <c:path>$user/extension/saID</c:path>
+            </target>
+        </inbound>
+    </attribute>
+    <attribute id="6">
+        <c:ref xmlns:ri="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3">ri:profitData</c:ref>
+        <tolerant>true</tolerant>
+        <exclusiveStrong>false</exclusiveStrong>
+        <inbound id="7">
+            <authoritative>true</authoritative>
+            <exclusive>false</exclusive>
+            <strength>normal</strength>
+            <target>
+                <c:path>$user/extension/profitData</c:path>
+            </target>
+        </inbound>
+    </attribute>
+</objectType>
+</schemaHandling>
+    <capabilities>
+        <cachingMetadata>
+            <retrievalTimestamp>2022-02-06T17:21:58.897Z</retrievalTimestamp>
+            <serialNumber>b9a830e999518e91-4fdad3867151b791</serialNumber>
+        </cachingMetadata>
+        <native xmlns:cap="http://midpoint.evolveum.com/xml/ns/public/resource/capabilities-3">
+            <cap:schema/>
+            <cap:testConnection/>
+            <cap:create/>
+            <cap:script>
+                <cap:host>
+                    <cap:type>connector</cap:type>
+                </cap:host>
+            </cap:script>
+            <cap:read>
+                <cap:returnDefaultAttributesOption>false</cap:returnDefaultAttributesOption>
+            </cap:read>
+        </native>
+        <configured xmlns:cap="http://midpoint.evolveum.com/xml/ns/public/resource/capabilities-3">
+            <cap:testConnection>
+                <cap:enabled>true</cap:enabled>
+            </cap:testConnection>
+            <cap:create>
+                <cap:enabled>true</cap:enabled>
+            </cap:create>
+            <cap:script>
+                <cap:enabled>true</cap:enabled>
+                <cap:host>
+                    <cap:type>connector</cap:type>
+                </cap:host>
+            </cap:script>
+            <cap:read>
+                <cap:enabled>true</cap:enabled>
+                <cap:returnDefaultAttributesOption>false</cap:returnDefaultAttributesOption>
+            </cap:read>
+        </configured>
+    </capabilities>
+    <synchronization>
+        <objectSynchronization>
+            <name>Account sync policy</name>
+            <objectClass>ri:AccountObjectClass</objectClass>
+            <kind>account</kind>
+            <intent>default</intent>
+            <focusType>c:UserType</focusType>
+            <enabled>true</enabled>
+            <correlation>
+                <q:equal>
+                    <q:path>extension/saID</q:path>
+                    <expression>
+                        <path xmlns:ri="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3">$account/attributes/ri:saID</path>
+                    </expression>
+                </q:equal>
+            </correlation>
+            <reconcile>false</reconcile>
+            <reaction>
+                <situation>linked</situation>
+                <synchronize>true</synchronize>
+            </reaction>
+            <reaction>
+                <situation>unlinked</situation>
+                <synchronize>true</synchronize>
+                <action>
+                    <handlerUri>http://midpoint.evolveum.com/xml/ns/public/model/action-3#link</handlerUri>
+                </action>
+            </reaction>
+            <reaction>
+                <situation>unmatched</situation>
+                <synchronize>true</synchronize>
+                <reconcile>true</reconcile>
+                <action>
+                    <handlerUri>http://midpoint.evolveum.com/xml/ns/public/model/action-3#addFocus</handlerUri>
+                </action>
+            </reaction>
+        </objectSynchronization>
+    </synchronization>
+</resource>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects xmlns="http://midpoint.evolveum.com/xml/ns/public/common/common-3"
+         xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3"
+         xmlns:org="http://midpoint.evolveum.com/xml/ns/public/common/org-3">
+    <role xmlns="http://midpoint.evolveum.com/xml/ns/public/common/common-3" xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3" xmlns:icfs="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/resource-schema-3" xmlns:org="http://midpoint.evolveum.com/xml/ns/public/common/org-3" xmlns:q="http://prism.evolveum.com/xml/ns/public/query-3" xmlns:ri="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3" xmlns:t="http://prism.evolveum.com/xml/ns/public/types-3" oid="dc6fbbfc-faec-445a-b345-bf56dae3ff10" version="1">
+        <name>Multi-resource user</name>
+        <metadata>
+            <requestTimestamp>2020-11-03T03:54:48.643Z</requestTimestamp>
+            <requestorRef oid="00000000-0000-0000-0000-000000000002" relation="org:default" type="c:UserType">
+                <!-- administrator -->
+            </requestorRef>
+            <createTimestamp>2020-11-03T03:54:48.785Z</createTimestamp>
+            <creatorRef oid="00000000-0000-0000-0000-000000000002" relation="org:default" type="c:UserType">
+                <!-- administrator -->
+            </creatorRef>
+            <createChannel>http://midpoint.evolveum.com/xml/ns/public/common/channels-3#user</createChannel>
+        </metadata>
+        <operationExecution id="2">
+            <timestamp>2020-11-03T03:54:48.849Z</timestamp>
+            <operation>
+                <objectDelta>
+                    <t:changeType>add</t:changeType>
+                    <t:objectType>c:RoleType</t:objectType>
+                </objectDelta>
+                <executionResult>
+                    <operation>com.evolveum.midpoint.model.impl.lens.ChangeExecutor.executeDelta</operation>
+                    <status>success</status>
+                    <importance>normal</importance>
+                    <token>1000000000000000466</token>
+                </executionResult>
+                <objectName>Basic User</objectName>
+            </operation>
+            <status>success</status>
+            <initiatorRef oid="00000000-0000-0000-0000-000000000002" relation="org:default" type="c:UserType">
+                <!-- administrator -->
+            </initiatorRef>
+            <channel>http://midpoint.evolveum.com/xml/ns/public/common/channels-3#user</channel>
+        </operationExecution>
+        <iteration>0</iteration>
+        <iterationToken/>
+        <activation>
+            <effectiveStatus>enabled</effectiveStatus>
+            <enableTimestamp>2020-11-03T03:54:48.692Z</enableTimestamp>
+        </activation>
+        <inducement>
+            <construction>
+                <resourceRef oid="eefb6b98-9ef8-4523-90ff-feb58563a624" relation="org:default" type="c:ResourceType">
+                    <!-- IAA -->
+                </resourceRef>
+            </construction>
+        </inducement>
+        <inducement id="1">
+            <construction>
+                <resourceRef oid="6d475d6b-8fa7-4fb0-b2de-f311b315339c" relation="org:default" type="c:ResourceType">
+                    <!-- SPARKLE -->
+                </resourceRef>
+            </construction>
+        </inducement>
+        <inducement id="3">
+            <construction>
+                <resourceRef oid="4c627e2a-01ab-4139-ba08-9d7c75a0a012" relation="org:default" type="c:ResourceType">
+                    <!-- COUCHBASE -->
+                </resourceRef>
+            </construction>
+        </inducement>
+        <inducement id="4">
+            <construction>
+                <resourceRef oid="b3d2aa73-ba30-4a8c-986f-e0d577944484" relation="org:default" type="c:ResourceType">
+                    <!-- PROFIT -->
+                </resourceRef>
+            </construction>
+        </inducement>
+        <inducement id="7">
+            <construction>
+                <resourceRef oid="f22df5b2-6daf-4bfd-ba52-f999966fb149" relation="org:default" type="c:ResourceType">
+                    <!-- MFA -->
+                </resourceRef>
+            </construction>
+        </inducement>
+        <inducement id="8">
+            <construction>
+                <resourceRef oid="dabfcbe2-42c2-4611-8df0-745cbb224148" relation="org:default" type="c:ResourceType">
+                    <!-- Policy-overlay trigger -->
+                </resourceRef>
+            </construction>
+        </inducement>
+    </role>
+
+</objects>

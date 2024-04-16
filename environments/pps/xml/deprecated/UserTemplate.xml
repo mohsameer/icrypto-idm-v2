@@ -1,0 +1,1490 @@
+<objectTemplate xmlns="http://midpoint.evolveum.com/xml/ns/public/common/common-3"
+                xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3"
+                xmlns:t="http://prism.evolveum.com/xml/ns/public/types-3"
+                xmlns:icfs="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/resource-schema-3"
+                xmlns:org="http://midpoint.evolveum.com/xml/ns/public/common/org-3"
+                xmlns:q="http://prism.evolveum.com/xml/ns/public/query-3"
+                xmlns:ri="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3"
+                oid="c0c010c0-d34d-b33f-f00d-777222222333"
+                version="pps.0.0.1">
+    <name>Default User Template</name>
+    <description>
+        VERSION: pps.0.0.1
+        This object is used when creating a new account to set derrived parameters(mappings).
+        This hides or makes fields required(items).
+    </description>
+    <metadata>
+        <requestTimestamp>2023-06-20T09:40:14.016Z</requestTimestamp>
+        <requestorRef oid="00000000-0000-0000-0000-000000000002" relation="org:default" type="c:UserType">
+            <!-- administrator -->
+        </requestorRef>
+        <createTimestamp>2023-06-20T09:40:14.170Z</createTimestamp>
+        <creatorRef oid="00000000-0000-0000-0000-000000000002" relation="org:default" type="c:UserType">
+            <!-- administrator -->
+        </creatorRef>
+        <createChannel>http://midpoint.evolveum.com/xml/ns/public/gui/channels-3#user</createChannel>
+    </metadata>
+    <operationExecution id="88">
+        <timestamp>2023-06-20T09:40:14.709Z</timestamp>
+        <operation>
+            <objectDelta>
+                <t:changeType>add</t:changeType>
+                <t:objectType>c:ObjectTemplateType</t:objectType>
+            </objectDelta>
+            <executionResult>
+                <operation>com.evolveum.midpoint.model.impl.lens.ChangeExecutor.executeDelta</operation>
+                <status>success</status>
+                <importance>normal</importance>
+                <token>1000000000000022214</token>
+            </executionResult>
+            <objectName>Default User Template</objectName>
+        </operation>
+        <status>success</status>
+        <initiatorRef oid="00000000-0000-0000-0000-000000000002" relation="org:default" type="c:UserType">
+            <!-- administrator -->
+        </initiatorRef>
+        <channel>http://midpoint.evolveum.com/xml/ns/public/gui/channels-3#user</channel>
+    </operationExecution>
+    <iteration>0</iteration>
+    <iterationToken/>
+    <item id="23">
+        <c:ref>additionalName</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="24">
+        <c:ref>fullName</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="25">
+        <c:ref>nickName</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="26">
+        <c:ref>honorificPrefix</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="27">
+        <c:ref>honorificSuffix</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="28">
+        <c:ref>preferredLanguage</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="29">
+        <c:ref>locale</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="30">
+        <c:ref>timezone</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="31">
+        <c:ref>employeeNumber</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="32">
+        <c:ref>employeeType</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="33">
+        <c:ref>costCenter</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="34">
+        <c:ref>organization</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="35">
+        <c:ref>organizationalUnit</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="36">
+        <c:ref>locality</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="37">
+        <c:ref>activation</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="38">
+        <c:ref>description</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="39">
+        <c:ref>lifecycleState</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="40">
+        <c:ref>subtype</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="41">
+        <c:ref>jpegPhoto</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="42">
+        <c:ref>name</c:ref>
+        <limitations>
+            <layer>model</layer>
+            <layer>presentation</layer>
+            <minOccurs>1</minOccurs>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="43">
+        <c:ref>tenantRef</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="44">
+        <c:ref>extension/saID</c:ref>
+        <limitations>
+            <layer>model</layer>
+            <layer>presentation</layer>
+            <minOccurs>1</minOccurs>
+            <access>
+                <read>true</read>
+                <add>true</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="45">
+        <c:ref>extension/username</c:ref>
+        <limitations>
+            <layer>model</layer>
+            <layer>presentation</layer>
+            <access>
+                <read>true</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="46">
+        <c:ref>extension/vpNumber</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="47">
+        <c:ref>extension/vpAuthSys</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="48">
+        <c:ref>extension/vpCompany</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="49">
+        <c:ref>extension/vpIdnumber</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="50">
+        <c:ref>extension/vpRegion</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="51">
+        <c:ref>extension/vpUpn</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="52">
+        <c:ref>extension/trueSAEnrollmentStatus</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="53">
+        <c:ref>extension/icryptoUserId</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>true</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="54">
+        <c:ref>extension/emails</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>true</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="55">
+        <c:ref>extension/mobiles</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>true</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="56">
+        <c:ref>extension/vettingOutcome</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="57">
+        <c:ref>extension/enabled</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="58">
+        <c:ref>extension/vpCountry</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="59">
+        <c:ref>extension/passportNumber</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="60">
+        <c:ref>extension/employeeNumber</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="61">
+        <c:ref>extension/vpAdlogon</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="62">
+        <c:ref>extension/vettingLastModified</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="63">
+        <c:ref>extension/vettingCreatedDate</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="64">
+        <c:ref>extension/contractor</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="65">
+        <c:ref>extension/groups</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="66">
+        <c:ref>extension/testUser</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="67">
+        <c:ref>extension/status</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="68">
+        <c:ref>extension/enrollmentStatus</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="69">
+        <c:ref>extension/tagHolderID</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="70">
+        <c:ref>extension/tagHolderGUID</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="71">
+        <c:ref>extension/preferredName</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="72">
+        <c:ref>extension/company</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="73">
+        <c:ref>extension/department</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="74">
+        <c:ref>extension/idNumber</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="75">
+        <c:ref>extension/tagNumber</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="76">
+        <c:ref>extension/address1</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="77">
+        <c:ref>extension/address2</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="78">
+        <c:ref>extension/suburb</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="79">
+        <c:ref>extension/city</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="80">
+        <c:ref>extension/zip</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="81">
+        <c:ref>extension/homeTel</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="82">
+        <c:ref>extension/workTel</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="83">
+        <c:ref>extension/cellTel</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="84">
+        <c:ref>extension/otherTel</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="85">
+        <c:ref>extension/employmentStartDate</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="86">
+        <c:ref>extension/employmentEndDate</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <item id="87">
+        <c:ref>extension/vodaperson</c:ref>
+        <limitations>
+            <layer>presentation</layer>
+            <access>
+                <read>false</read>
+                <add>false</add>
+                <modify>false</modify>
+            </access>
+        </limitations>
+    </item>
+    <mapping id="1">
+        <description>
+            username generation
+        </description>
+        <strength>weak</strength>
+        <source>
+            <c:path>$user/givenName</c:path>
+        </source>
+        <source>
+            <c:path>$user/familyName</c:path>
+        </source>
+        <expression>
+            <script xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3"
+                    xsi:type="c:ScriptExpressionEvaluatorType">
+                <code>
+                    if(givenName != null &amp;&amp; familyName != null) {
+                    if(givenName.length() &gt;= 1 &amp;&amp; familyName.length() &gt;=2) {
+                    boolean isUnique = false;
+                    String username = "";
+                    int number = 0
+                    while(!isUnique) {
+                    username = givenName.getNorm().replaceAll("\\s+","").substring(0,1).toLowerCase() + familyName.getNorm().replaceAll("\\s+","").toLowerCase()
+                    if(number &gt; 0) username += String.valueOf(number)
+                    isUnique = midpoint.isUniquePropertyValue(user, "extension/username", username)
+                    number += 1
+                    }
+                    return username
+                    } else {
+                    throw new com.evolveum.midpoint.util.exception.PolicyViolationException("username violation");
+                    }
+                    }
+                </code>
+            </script>
+        </expression>
+        <target>
+            <c:path>$user/extension/username</c:path>
+        </target>
+    </mapping>
+    <mapping id="2">
+        <description>
+            icryptoUserId generation
+        </description>
+        <strength>weak</strength>
+        <expression>
+            <script xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3"
+                    xsi:type="c:ScriptExpressionEvaluatorType">
+                <code>
+                    import java.util.UUID;
+
+                    if(user != null) {
+                    boolean isUnique = false;
+                    String uuid = "";
+                    while(!isUnique) {
+                    uuid = UUID.randomUUID().toString();
+                    isUnique = midpoint.isUniquePropertyValue(user, "extension/icryptoUserId", uuid);
+                    }
+                    return uuid;
+                    }
+                </code>
+            </script>
+        </expression>
+        <target>
+            <c:path>$user/extension/icryptoUserId</c:path>
+        </target>
+    </mapping>
+    <mapping id="3">
+        <source>
+            <c:path>$user/extension/saID</c:path>
+        </source>
+        <target>
+            <c:path>$user/name</c:path>
+        </target>
+    </mapping>
+    <mapping id="4">
+        <name>role-assignment</name>
+        <strength>weak</strength>
+        <source>
+            <c:path>subtype</c:path>
+        </source>
+        <expression>
+            <value xmlns="">
+                <targetRef oid="dc6fbbfc-faec-445a-b345-bf56dae3ff10" type="RoleType"/>
+            </value>
+        </expression>
+        <target>
+            <c:path>assignment</c:path>
+        </target>
+    </mapping>
+    <mapping id="5">
+        <description>
+            mfaEnabled setup
+        </description>
+        <strength>weak</strength>
+        <expression>
+            <script xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3"
+                    xsi:type="c:ScriptExpressionEvaluatorType">
+                <code>
+                    false
+                </code>
+            </script>
+        </expression>
+        <target>
+            <c:path>$user/extension/mfaEnabled</c:path>
+        </target>
+    </mapping>
+    <mapping id="6">
+        <description>
+            Enable2Fa setup
+        </description>
+        <strength>weak</strength>
+        <expression>
+            <script xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3"
+                    xsi:type="c:ScriptExpressionEvaluatorType">
+                <code>
+                    true
+                </code>
+            </script>
+        </expression>
+        <target>
+            <c:path>$user/extension/Enable2Fa</c:path>
+        </target>
+    </mapping>
+    <mapping id="7">
+        <description>
+            passwordlessEnabled setup
+        </description>
+        <strength>weak</strength>
+        <expression>
+            <script xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3"
+                    xsi:type="c:ScriptExpressionEvaluatorType">
+                <code>
+                    false
+                </code>
+            </script>
+        </expression>
+        <target>
+            <c:path>$user/extension/passwordlessEnabled</c:path>
+        </target>
+    </mapping>
+    <mapping id="8">
+        <description>
+            eligible setup
+        </description>
+        <strength>weak</strength>
+        <expression>
+            <script xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3"
+                    xsi:type="c:ScriptExpressionEvaluatorType">
+                <code>
+                    false
+                </code>
+            </script>
+        </expression>
+        <target>
+            <c:path>$user/extension/eligible</c:path>
+        </target>
+    </mapping>
+    <mapping id="9">
+        <description>
+            administrativeStatus setup
+        </description>
+        <strength>weak</strength>
+        <expression>
+            <script xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3"
+                    xsi:type="c:ScriptExpressionEvaluatorType">
+                <code>
+                    import com.evolveum.midpoint.xml.ns._public.common.common_3.ActivationStatusType;
+                    return ActivationStatusType.ENABLED
+                </code>
+            </script>
+        </expression>
+        <target>
+            <c:path>$user/activation/administrativeStatus</c:path>
+        </target>
+    </mapping>
+    <mapping id="10">
+        <description>
+            registered setup
+        </description>
+        <strength>strong</strength>
+        <source>
+            <c:path>$user/credentials/password/value</c:path>
+        </source>
+        <expression>
+            <script xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3"
+                    xsi:type="c:ScriptExpressionEvaluatorType">
+                <code>
+                    return value != null
+                </code>
+            </script>
+        </expression>
+        <target>
+            <c:path>$user/extension/registered</c:path>
+        </target>
+    </mapping>
+    <mapping id="11">
+        <strength>weak</strength>
+        <source>
+            <c:path>$user/extension/sparkleData</c:path>
+        </source>
+        <source>
+            <c:path>$user/extension/profitData</c:path>
+        </source>
+        <source>
+            <c:path>$user/extension/iaaData</c:path>
+        </source>
+        <source>
+            <c:path>$user/extension/hrFeedData</c:path>
+        </source>
+        <expression>
+            <script xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3"
+                    xsi:type="c:ScriptExpressionEvaluatorType">
+                <code>
+                    import org.json.JSONArray
+                    import org.json.JSONObject
+                    import org.json.JSONException
+                    // Order is sparkle, IAA, HR (profit does not have first name)
+                    if(sparkleData != null) {
+                    try {
+                    JSONArray array = new JSONArray(sparkleData)
+                    return array.getJSONObject(0).getString("firstname")
+                    } catch(JSONException e) {
+                    }
+                    }
+                    if(iaaData != null) {
+                    try {
+                    JSONArray array = new JSONArray(iaaData)
+                    return array.getJSONObject(0).getString("firstName")
+                    } catch(JSONException e) {
+                    }
+                    }
+                    if(hrFeedData != null) {
+                    try {
+                    JSONObject object = new JSONObject(hrFeedData)
+                    return object.getString("employeeGivenName");
+                    } catch(JSONException e) {
+                    }
+                    }
+                </code>
+            </script>
+        </expression>
+        <target>
+            <c:path>$user/givenName</c:path>
+        </target>
+    </mapping>
+    <mapping id="12">
+        <strength>weak</strength>
+        <source>
+            <c:path>$user/extension/sparkleData</c:path>
+        </source>
+        <source>
+            <c:path>$user/extension/profitData</c:path>
+        </source>
+        <source>
+            <c:path>$user/extension/iaaData</c:path>
+        </source>
+        <source>
+            <c:path>$user/extension/hrFeedData</c:path>
+        </source>
+        <expression>
+            <script xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3"
+                    xsi:type="c:ScriptExpressionEvaluatorType">
+                <code>
+                    import org.json.JSONArray
+                    import org.json.JSONObject
+                    import org.json.JSONException
+
+                    // Order is profit(LDAP), Sprakle, IAA and HR
+                    if(profitData != null) {
+                    try {
+                    JSONArray array = new JSONArray(profitData)
+                    return array.getJSONObject(0).getString("sn")
+                    } catch(JSONException e) {
+                    }
+                    }
+
+                    if(sparkleData != null) {
+                    try {
+                    JSONArray array = new JSONArray(sparkleData)
+                    return array.getJSONObject(0).getString("surname")
+                    } catch(JSONException e) {
+                    }
+                    }
+
+                    if(iaaData != null) {
+                    try {
+                    JSONArray array = new JSONArray(iaaData)
+                    return array.getJSONObject(0).getString("lastName")
+                    } catch(JSONException e) {
+                    }
+                    }
+
+                    if(hrFeedData != null) {
+                    try {
+                    JSONObject object = new JSONObject(hrFeedData)
+                    return object.getString("employeeSurname")
+                    } catch(JSONException e) {
+                    }
+                    }
+                </code>
+            </script>
+        </expression>
+        <target>
+            <c:path>$user/familyName</c:path>
+        </target>
+    </mapping>
+    <mapping id="13">
+        <strength>strong</strength>
+        <source>
+            <c:path>$user/extension/sparkleData</c:path>
+        </source>
+        <source>
+            <c:path>$user/extension/profitData</c:path>
+        </source>
+        <source>
+            <c:path>$user/extension/iaaData</c:path>
+        </source>
+        <source>
+            <c:path>$user/extension/hrFeedData</c:path>
+        </source>
+        <expression>
+            <script xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3"
+                    xsi:type="c:ScriptExpressionEvaluatorType">
+                <code>
+                    import org.json.JSONArray
+                    import org.json.JSONObject
+                    import java.util.*
+                    import org.json.JSONException
+
+                    Set&lt;String&gt; mobiles = new LinkedHashSet&lt;&gt;();
+
+                    if(iaaData != null) {
+                    try {
+                    JSONArray array = new JSONArray(iaaData)
+                    for(int i = 0; i &lt; array.getJSONObject(0).getJSONArray("contactPoints").length() ; i++) {
+                    JSONObject jsonObject = array.getJSONObject(0).getJSONArray("contactPoints").getJSONObject(i);
+                    if(jsonObject.getString("type").equals("Mobile")) mobiles.add(jsonObject.getString("value"));
+                    }
+                    } catch(JSONException e) {
+                    }
+                    }
+
+                    if(sparkleData != null) {
+                    JSONArray array = new JSONArray(sparkleData);
+                    for (int i = 0; i &lt; array.length(); i++) {
+                    try {
+                    mobiles.add(array.getJSONObject(i).getString("cellphonenumber"));
+                    } catch(JSONException e) {
+                    }
+                    }
+                    }
+
+                    if(profitData != null) {
+                    try {
+                    JSONArray array = new JSONArray(profitData)
+                    mobiles.add(array.getJSONObject(0).getString("mobile"))
+                    } catch(JSONException e) {
+                    }
+                    }
+
+                    if(hrFeedData != null) {
+                    try {
+                    JSONObject object = new JSONObject(hrFeedData)
+                    mobiles.add(object.getString("employeeMobileNumber"))
+                    } catch(JSONException e) {
+                    }
+                    }
+
+                    def returnResult = [];
+                    for(int i = 0 ; i &lt; mobiles.size() ; i++) {
+                    returnResult.add((String) mobiles.toArray()[i])
+                    }
+
+                    List&lt;String&gt; mobilesNew = new ArrayList&lt;&gt;();
+                    for(String mobile : mobiles) {
+                    mobile = mobile.replaceAll("\\s","");
+                    if(mobile.startsWith("+270") &amp;&amp; mobile.length() == 13) {
+                    mobilesNew.add("+27" + mobile.substring(4));
+                    } else if(mobile.startsWith("+") &amp;&amp; mobile.length() == 12) {
+                    mobilesNew.add(mobile);
+                    } else if(mobile.length() == 9) {
+                    mobilesNew.add("+27" + mobile);
+                    } else if(mobile.length() == 10 &amp;&amp; mobile.startsWith("0")) {
+                    mobilesNew.add("+27" + mobile.substring(1));
+                    } else if(mobile.length() == 11) {
+                    mobilesNew.add("+" + mobile);
+                    }
+                    }
+
+
+                    return mobilesNew;
+                </code>
+            </script>
+        </expression>
+        <target>
+            <c:path>$user/extension/mobiles</c:path>
+            <set>
+                <predefined>all</predefined>
+            </set>
+        </target>
+    </mapping>
+    <mapping id="14">
+        <strength>weak</strength>
+        <source>
+            <c:path>$user/extension/emails</c:path>
+        </source>
+        <expression>
+            <script xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3"
+                    xsi:type="c:ScriptExpressionEvaluatorType">
+                <relativityMode>absolute</relativityMode>
+                <code>
+                    if(emails != null &amp;&amp; !emails.isEmpty()) {
+                    try {
+                    return emails.get(0);
+                    } catch(Exception e) {
+                    return emails;
+                    }
+                    }
+                </code>
+            </script>
+        </expression>
+        <target>
+            <c:path>$user/emailAddress</c:path>
+        </target>
+    </mapping>
+    <mapping id="15">
+        <strength>weak</strength>
+        <source>
+            <c:path>$user/extension/mobiles</c:path>
+        </source>
+        <expression>
+            <script xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3"
+                    xsi:type="c:ScriptExpressionEvaluatorType">
+                <relativityMode>absolute</relativityMode>
+                <code>
+                    if(mobiles != null &amp;&amp; !mobiles.isEmpty()) {
+                    try {
+                    return mobiles.get(0);
+                    } catch(Exception e) {
+                    return mobiles;
+                    }
+                    }
+                </code>
+            </script>
+        </expression>
+        <target>
+            <c:path>$user/telephoneNumber</c:path>
+        </target>
+    </mapping>
+    <mapping id="16">
+        <strength>weak</strength>
+        <source>
+            <c:path>$user/extension/sparkleData</c:path>
+        </source>
+        <source>
+            <c:path>$user/extension/hrFeedData</c:path>
+        </source>
+        <expression>
+            <script xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3"
+                    xsi:type="c:ScriptExpressionEvaluatorType">
+                <code>
+                    import org.json.JSONArray
+                    import org.json.JSONObject
+                    import org.json.JSONException
+
+                    if(sparkleData != null) {
+                    try {
+                    JSONArray array = new JSONArray(sparkleData)
+                    return array.getJSONObject(0).getString("title")
+                    } catch(JSONException e) {
+                    }
+                    }
+
+                    if(hrFeedData != null) {
+                    try {
+                    JSONObject object = new JSONObject(hrFeedData)
+                    return object.getString("employeeTitle")
+                    } catch(JSONException e) {
+                    }
+                    }
+                </code>
+            </script>
+        </expression>
+        <target>
+            <c:path>$user/title</c:path>
+        </target>
+    </mapping>
+    <mapping id="17">
+        <strength>strong</strength>
+        <source>
+            <c:path>$user/extension/sparkleData</c:path>
+        </source>
+        <source>
+            <c:path>$user/extension/profitData</c:path>
+        </source>
+        <source>
+            <c:path>$user/extension/iaaData</c:path>
+        </source>
+        <source>
+            <c:path>$user/extension/hrFeedData</c:path>
+        </source>
+        <expression>
+            <script xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3"
+                    xsi:type="c:ScriptExpressionEvaluatorType">
+                <code>
+                    import org.json.JSONArray
+                    import org.json.JSONObject
+                    import java.util.*
+                    import org.json.JSONException
+
+                    Set&lt;String&gt; emails = new LinkedHashSet&lt;&gt;();
+
+                    if(iaaData != null) {
+                    try {
+                    JSONArray array = new JSONArray(iaaData)
+                    for(int i = 0; i &lt; array.getJSONObject(0).getJSONArray("contactPoints").length() ; i++) {
+                    JSONObject jsonObject = array.getJSONObject(0).getJSONArray("contactPoints").getJSONObject(i);
+                    if(jsonObject.getString("type").equals("Email")) emails.add(jsonObject.getString("value"));
+                    }
+                    } catch(JSONException e) {
+                    }
+                    }
+
+                    if(sparkleData != null) {
+                    JSONArray array = new JSONArray(sparkleData);
+                    for (int i = 0; i &lt; array.length(); i++) {
+                    try {
+                    emails.add(array.getJSONObject(i).getString("email"));
+                    } catch(JSONException e) {
+                    }
+                    }
+                    }
+
+                    if(profitData != null) {
+                    try {
+                    JSONArray array = new JSONArray(profitData)
+                    emails.add(array.getJSONObject(0).getString("mail"))
+                    } catch(JSONException e) {
+                    }
+                    }
+
+                    if(hrFeedData != null) {
+                    try {
+                    JSONObject object = new JSONObject(hrFeedData)
+                    emails.add(object.getString("emailAddress"))
+                    } catch(JSONException e) {
+                    }
+                    try {
+                    JSONObject object = new JSONObject(hrFeedData)
+                    emails.add(object.getString("emailAddress2"))
+                    } catch(JSONException e) {
+                    }
+                    }
+
+                    def returnResult = [];
+                    for(int i = 0 ; i &lt; emails.size() ; i++) {
+                    returnResult.add(((String) emails.toArray()[i]).toLowerCase())
+                    }
+                    return returnResult;
+                </code>
+            </script>
+        </expression>
+        <target>
+            <c:path>$user/extension/emails</c:path>
+            <set>
+                <predefined>all</predefined>
+            </set>
+        </target>
+    </mapping>
+    <mapping id="18">
+        <strength>normal</strength>
+        <source>
+            <c:path>$user/extension/sparkleData</c:path>
+        </source>
+        <expression>
+            <value xmlns="">
+                <targetRef oid="f31cdac4-6cad-42d7-a4f2-f21047308fac" type="RoleType"/>
+            </value>
+        </expression>
+        <target>
+            <c:path>assignment</c:path>
+        </target>
+        <condition>
+            <script xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3"
+                    xsi:type="c:ScriptExpressionEvaluatorType">
+                <code>
+                    if(sparkleData != null) {
+                    return sparkleData.contains('"roletype":"Investor"')
+                    }
+                </code>
+            </script>
+        </condition>
+    </mapping>
+    <mapping id="19">
+        <strength>normal</strength>
+        <source>
+            <c:path>$user/extension/sparkleData</c:path>
+        </source>
+        <expression>
+            <value xmlns="">
+                <targetRef oid="e504a8f8-8560-42fa-a59b-b883c42b2881" type="RoleType"/>
+            </value>
+        </expression>
+        <target>
+            <c:path>assignment</c:path>
+        </target>
+        <condition>
+            <script xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3"
+                    xsi:type="c:ScriptExpressionEvaluatorType">
+                <code>
+                    if(sparkleData != null) {
+                    return sparkleData.contains('"roletype":"Intermediary"')
+                    }
+                </code>
+            </script>
+        </condition>
+    </mapping>
+    <mapping id="20">
+        <name>Validate saID uniqueness</name>
+        <source>
+            <c:path>$user/extension/saID</c:path>
+        </source>
+        <expression>
+            <script xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3"
+                    xsi:type="c:ScriptExpressionEvaluatorType">
+                <code>
+                    boolean isNew = com.evolveum.midpoint.model.common.expression.script.ScriptExpressionEvaluationContext.getThreadLocal().isEvaluateNew()
+                    if (isNew &amp;&amp; saID != null) {
+                    boolean unique = midpoint.isUniquePropertyValue(user, "extension/saID", saID)
+                    if (!unique) {
+                    throw new com.evolveum.midpoint.util.exception.PolicyViolationException("SA ID " + saID + " is already used.");
+                    }
+                    }
+                </code>
+            </script>
+        </expression>
+    </mapping>
+    <mapping id="21">
+        <description>
+            given name normalization
+        </description>
+        <strength>strong</strength>
+        <source>
+            <c:path>$user/givenName</c:path>
+        </source>
+        <expression>
+            <script xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3"
+                    xsi:type="c:ScriptExpressionEvaluatorType">
+                <code>
+                    if(givenName != null){
+                    List&lt;String&gt; words = Arrays.asList(givenName.getOrig().split("\\s"));
+                    String capitalizeWord="";
+                    for(String w:words){
+                    w = w.trim()
+                    if(w.length()>0){
+                    String first=w.substring(0,1);
+                    String afterfirst=w.substring(1);
+                    capitalizeWord+=first.toUpperCase()+afterfirst.toLowerCase()+" ";
+                    }
+                    }
+                    return capitalizeWord.trim();
+                    }
+                </code>
+            </script>
+        </expression>
+        <target>
+            <c:path>$user/givenName</c:path>
+        </target>
+    </mapping>
+    <mapping id="22">
+        <description>
+            family name normalization
+        </description>
+        <strength>strong</strength>
+        <source>
+            <c:path>$user/familyName</c:path>
+        </source>
+        <expression>
+            <script xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3"
+                    xsi:type="c:ScriptExpressionEvaluatorType">
+                <code>
+                    if(familyName != null){
+                    List&lt;String&gt; words = Arrays.asList(familyName.getOrig().split("\\s"));
+                    String capitalizeWord="";
+                    for(String w:words){
+                    w = w.trim()
+                    if(w.length()>0){
+                    String first=w.substring(0,1);
+                    String afterfirst=w.substring(1);
+                    capitalizeWord+=first.toUpperCase()+afterfirst.toLowerCase()+" ";
+                    }
+                    }
+                    return capitalizeWord.trim();
+                    }
+                </code>
+            </script>
+        </expression>
+        <target>
+            <c:path>$user/familyName</c:path>
+        </target>
+    </mapping>
+</objectTemplate>

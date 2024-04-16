@@ -1,0 +1,39 @@
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+{
+  "manifestVersion": "2.0.0",
+  "signatureType": "private",
+  "signedByOrg": "dnpatel308",
+  "signedByOrgName": "dnpatel308",
+  "rootUrls": [
+    "http://localhost:3000/"
+  ],
+  "plugin": "http-request-panel-plugin",
+  "version": "1.0.0",
+  "time": 1691234056806,
+  "keyId": "7e4d0c6a708866e7",
+  "files": {
+    "CHANGELOG.md": "ba613d6f914b27dce9ace4d8c0cb074273c9eb6c536d8e7ac24c5ce6ae941fd0",
+    "img/logo.svg": "df5ccfc383d1128f56b673364eadb290da80f3741e4040c9634042bfb76a0ae6",
+    "img/screenshot.png": "2a7005af1f4e9e803fd6f9e3fa21766706084a8c702de7b3c05713ba50a0642c",
+    "LICENSE": "c5accbbd8546e94c34aed24afe689a617627d18eed5a6c48277e48db57c23851",
+    "module.js": "2ad2eed347fe940cc4dd1ce70d2a5c789d414ef2731ecd191ac837571e45e487",
+    "module.js.map": "13c82a7bf3d1eb1805fd26140b2723822b50bf231c52c4df17a02eafd60b4c66",
+    "plugin.json": "baac107844709f2828fbad3547a4d60107878383145991d95637bf81d2aa8772",
+    "README.md": "217404742719a121c822977cfedac4b963fc37079683185562d2ca676f2cfeeb",
+    "static/button-panel.css": "d6debc015aff67c2ccde580cd00ce497ef1f1c7c001e6af400e802de8c77abb4"
+  }
+}
+-----BEGIN PGP SIGNATURE-----
+Version: OpenPGP.js v4.10.10
+Comment: https://openpgpjs.org
+
+wrcEARMKAAYFAmTOLwkAIQkQfk0ManCIZucWIQTzOyW2kQdOhGNlcPN+TQxq
+cIhm5xE9Agd898Ml2xioMODSwaOy2Opq+L+N8S+2FNGakE/3LMy1dE6v38uE
+9rnBc/4a52N0K8KGWo4yBScsiTqgQovYnWY/AwIIgmt8+g4JLReBF5+i4hvT
+SnGzWCt5bZM/YCeiikxJLOcpGoOvUZf9HuYAV2itsurcIIXBZ+sL+8krda5O
+kqW0wOc=
+=c6HT
+-----END PGP SIGNATURE-----

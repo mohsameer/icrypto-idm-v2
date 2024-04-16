@@ -1,0 +1,329 @@
+<resource xmlns="http://midpoint.evolveum.com/xml/ns/public/common/common-3"
+          xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3"
+          xmlns:icfs="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/resource-schema-3"
+          xmlns:org="http://midpoint.evolveum.com/xml/ns/public/common/org-3"
+          xmlns:q="http://prism.evolveum.com/xml/ns/public/query-3"
+          xmlns:ri="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3"
+          xmlns:t="http://prism.evolveum.com/xml/ns/public/types-3"
+          oid="b3d2aa73-ba30-4a8c-986f-e0d577944484">
+    <name>PRO-FiT-DB</name>
+    <description>
+        VERSION: pps.0.0.1
+        Resource to PPS PRO-FiT-DB (LDAP)
+    </description>
+    <iteration>0</iteration>
+    <iterationToken/>
+    <operationalState>
+        <lastAvailabilityStatus>up</lastAvailabilityStatus>
+    </operationalState>
+    <consistency>
+        <deadShadowRetentionPeriod>PT0S</deadShadowRetentionPeriod>
+    </consistency>
+    <connectorRef>
+        <!-- ConnId com.icrypto.connector.profit.ProfitConnector v0.0.1-SNAPSHOT -->
+        <description>Reference to the profit connectorType</description>
+        <filter>
+            <q:equal>
+                <q:path>connectorType</q:path>
+                <q:value>com.icrypto.connector.profit.ProfitConnector</q:value>
+            </q:equal>
+        </filter>
+    </connectorRef>
+    <connectorConfiguration xmlns:icfc="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/connector-schema-3">
+        <icfc:configurationProperties xmlns:gen385="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/bundle/com.evolveum.polygon.pps-profit-connector/com.icrypto.connector.profit.ProfitConnector">
+            <gen385:bindPassword>{{ with secret "secret/idm/pro-fit-bindPassword" -}}{{ .Data.value }}{{-  end }}</gen385:bindPassword>
+            <gen385:userAttributes>dn,sn,cn,uid,identitynumber,mail,memberno,partyid,mobile</gen385:userAttributes>
+            <gen385:userCreateServiceAddress>{{ with secret "secret/idm/pro-fit-userCreateServiceAddress" -}}{{ .Data.value }}{{-  end }}</gen385:userCreateServiceAddress>
+            <gen385:roleMemberFilter>(member={0})</gen385:roleMemberFilter>
+            <gen385:trustAllCertificates>true</gen385:trustAllCertificates>
+            <gen385:bindDN>{{ with secret "secret/idm/pro-fit-bindDN" -}}{{ .Data.value }}{{-  end }}</gen385:bindDN>
+            <gen385:roleBase>ou=Roles,dc=ppspar,DC=PPSDMN</gen385:roleBase>
+            <gen385:serviceHost>{{ with secret "secret/idm/pro-fit-serviceHost" -}}{{ .Data.value }}{{-  end }}</gen385:serviceHost>
+            <gen385:roleName>CN</gen385:roleName>
+            <gen385:servicePort>1389</gen385:servicePort>
+            <gen385:baseDN>ou=Users,dc=ppspar,DC=PPSDMN</gen385:baseDN>
+            <gen385:servicePrefix>ldap://</gen385:servicePrefix>
+            <gen385:serviceAddress>{{ with secret "secret/idm/pro-fit-serviceAddress" -}}{{ .Data.value }}{{-  end }}</gen385:serviceAddress>
+            <gen385:basePolicyDN>cn=Users,SECAUTHORITY=DEFAULT</gen385:basePolicyDN>
+            <gen385:createIaaLDAP>false</gen385:createIaaLDAP>
+        </icfc:configurationProperties>
+    </connectorConfiguration>
+    <schema>
+        <cachingMetadata>
+            <retrievalTimestamp>2023-10-20T10:08:03.364Z</retrievalTimestamp>
+            <serialNumber>ba3949f788afdcbf-1925f1c92c42343d</serialNumber>
+        </cachingMetadata>
+        <definition>
+            <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:a="http://prism.evolveum.com/xml/ns/public/annotation-3" xmlns:ra="http://midpoint.evolveum.com/xml/ns/public/resource/annotation-3" xmlns:tns="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3" elementFormDefault="qualified" targetNamespace="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3" xmlns:icfs="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/resource-schema-3">
+                <xsd:import namespace="http://prism.evolveum.com/xml/ns/public/annotation-3"/>
+                <xsd:import namespace="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/resource-schema-3"/>
+                <xsd:import namespace="http://midpoint.evolveum.com/xml/ns/public/resource/annotation-3"/>
+                <xsd:complexType name="AccountObjectClass">
+                    <xsd:annotation>
+                        <xsd:appinfo>
+                            <ra:resourceObject/>
+                            <ra:identifier>icfs:uid</ra:identifier>
+                            <ra:secondaryIdentifier xmlns:ri="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3">ri:saID</ra:secondaryIdentifier>
+                            <ra:displayNameAttribute xmlns:ri="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3">ri:saID</ra:displayNameAttribute>
+                            <ra:namingAttribute xmlns:ri="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3">ri:saID</ra:namingAttribute>
+                            <ra:nativeObjectClass>__ACCOUNT__</ra:nativeObjectClass>
+                            <ra:kind>account</ra:kind>
+                            <ra:default>true</ra:default>
+                        </xsd:appinfo>
+                    </xsd:annotation>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="0" name="password" type="xsd:string">
+                            <xsd:annotation>
+                                <xsd:appinfo>
+                                    <a:displayOrder>120</a:displayOrder>
+                                    <a:access>create</a:access>
+                                    <a:access>update</a:access>
+                                    <ra:frameworkAttributeName>password</ra:frameworkAttributeName>
+                                    <ra:returnedByDefault>false</ra:returnedByDefault>
+                                </xsd:appinfo>
+                            </xsd:annotation>
+                        </xsd:element>
+                        <xsd:element name="saID" type="xsd:string">
+                            <xsd:annotation>
+                                <xsd:appinfo>
+                                    <a:displayOrder>110</a:displayOrder>
+                                    <a:access>create</a:access>
+                                    <a:access>read</a:access>
+                                    <ra:nativeAttributeName>saID</ra:nativeAttributeName>
+                                    <ra:frameworkAttributeName>__NAME__</ra:frameworkAttributeName>
+                                </xsd:appinfo>
+                            </xsd:annotation>
+                        </xsd:element>
+                        <xsd:element minOccurs="0" name="profitData" type="xsd:string">
+                            <xsd:annotation>
+                                <xsd:appinfo>
+                                    <a:displayOrder>130</a:displayOrder>
+                                    <a:access>read</a:access>
+                                    <ra:frameworkAttributeName>profitData</ra:frameworkAttributeName>
+                                </xsd:appinfo>
+                            </xsd:annotation>
+                        </xsd:element>
+                        <xsd:element minOccurs="0" ref="icfs:uid">
+                            <xsd:annotation>
+                                <xsd:appinfo>
+                                    <a:displayName>ConnId UID</a:displayName>
+                                    <a:displayOrder>100</a:displayOrder>
+                                    <a:access>read</a:access>
+                                </xsd:appinfo>
+                            </xsd:annotation>
+                        </xsd:element>
+                        <xsd:element minOccurs="0" name="iaaData" type="xsd:string">
+                            <xsd:annotation>
+                                <xsd:appinfo>
+                                    <a:displayOrder>150</a:displayOrder>
+                                    <ra:frameworkAttributeName>iaaData</ra:frameworkAttributeName>
+                                </xsd:appinfo>
+                            </xsd:annotation>
+                        </xsd:element>
+                        <xsd:element minOccurs="0" name="username" type="xsd:string">
+                            <xsd:annotation>
+                                <xsd:appinfo>
+                                    <a:displayOrder>160</a:displayOrder>
+                                    <ra:frameworkAttributeName>username</ra:frameworkAttributeName>
+                                </xsd:appinfo>
+                            </xsd:annotation>
+                        </xsd:element>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:schema>
+        </definition>
+    </schema>
+    <schemaHandling>
+        <objectType id="4">
+            <kind>account</kind>
+            <default>true</default>
+            <objectClass>ri:AccountObjectClass</objectClass>
+            <attribute id="5">
+                <c:ref xmlns:ri="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3">ri:saID</c:ref>
+                <tolerant>true</tolerant>
+                <exclusiveStrong>false</exclusiveStrong>
+                <outbound>
+                    <name>saIDout</name>
+                    <authoritative>true</authoritative>
+                    <exclusive>false</exclusive>
+                    <strength>normal</strength>
+                    <expression>
+                        <c:path xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="t:ItemPathType">$user/extension/saID</c:path>
+                    </expression>
+                </outbound>
+                <inbound id="18">
+                    <authoritative>true</authoritative>
+                    <exclusive>false</exclusive>
+                    <strength>normal</strength>
+                    <expression>
+                        <script xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3" xsi:type="c:ScriptExpressionEvaluatorType">
+                            <code>
+                                return input.toString().trim();
+                            </code>
+                        </script>
+                    </expression>
+                    <target>
+                        <c:path>$user/extension/saID</c:path>
+                    </target>
+                </inbound>
+            </attribute>
+            <attribute id="6">
+                <c:ref xmlns:ri="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3">ri:profitData</c:ref>
+                <tolerant>true</tolerant>
+                <exclusiveStrong>false</exclusiveStrong>
+                <inbound id="7">
+                    <authoritative>true</authoritative>
+                    <exclusive>false</exclusive>
+                    <strength>normal</strength>
+                    <target>
+                        <c:path>$user/extension/profitData</c:path>
+                    </target>
+                </inbound>
+            </attribute>
+            <attribute id="42">
+                <c:ref xmlns:ri="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3">ri:password</c:ref>
+                <tolerant>true</tolerant>
+                <exclusiveStrong>false</exclusiveStrong>
+                <outbound>
+                    <authoritative>true</authoritative>
+                    <exclusive>false</exclusive>
+                    <strength>normal</strength>
+                    <source>
+                        <c:path>$focus/credentials/password/value</c:path>
+                    </source>
+                    <expression>
+                        <asIs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3" xsi:type="c:AsIsExpressionEvaluatorType"/>
+                    </expression>
+                </outbound>
+            </attribute>
+            <attribute id="80">
+                <c:ref xmlns:ri="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3">ri:iaaData</c:ref>
+                <tolerant>true</tolerant>
+                <exclusiveStrong>false</exclusiveStrong>
+                <outbound>
+                    <authoritative>true</authoritative>
+                    <exclusive>false</exclusive>
+                    <strength>normal</strength>
+                    <source>
+                        <c:path>$focus/extension/iaaData</c:path>
+                    </source>
+                </outbound>
+            </attribute>
+            <attribute id="47">
+                <c:ref xmlns:ri="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3">ri:username</c:ref>
+                <tolerant>true</tolerant>
+                <exclusiveStrong>false</exclusiveStrong>
+                <outbound>
+                    <authoritative>true</authoritative>
+                    <exclusive>false</exclusive>
+                    <strength>normal</strength>
+                    <source>
+                        <c:path>$focus/extension/username</c:path>
+                    </source>
+                </outbound>
+            </attribute>
+            <dependency id="40">
+                <resourceRef xmlns:tns="http://midpoint.evolveum.com/xml/ns/public/common/common-3" oid="eefb6b98-9ef8-4523-90ff-feb58563a624" relation="org:default" type="tns:ResourceType">
+                    <!-- IAA -->
+                </resourceRef>
+                <strictness>lax</strictness>
+            </dependency>
+        </objectType>
+    </schemaHandling>
+    <capabilities>
+        <cachingMetadata>
+            <retrievalTimestamp>2023-08-22T10:43:02.670Z</retrievalTimestamp>
+            <serialNumber>452f6e1d46b9f64e-160b2c29ee812a5b</serialNumber>
+        </cachingMetadata>
+        <native xmlns:cap="http://midpoint.evolveum.com/xml/ns/public/resource/capabilities-3">
+            <cap:schema/>
+            <cap:testConnection/>
+            <cap:create/>
+            <cap:update>
+                <cap:addRemoveAttributeValues>true</cap:addRemoveAttributeValues>
+            </cap:update>
+            <cap:delete/>
+            <cap:script>
+                <cap:host>
+                    <cap:type>connector</cap:type>
+                </cap:host>
+            </cap:script>
+            <cap:read>
+                <cap:returnDefaultAttributesOption>false</cap:returnDefaultAttributesOption>
+            </cap:read>
+        </native>
+        <configured xmlns:cap="http://midpoint.evolveum.com/xml/ns/public/resource/capabilities-3">
+            <cap:testConnection>
+                <cap:enabled>true</cap:enabled>
+            </cap:testConnection>
+            <cap:create>
+                <cap:enabled>true</cap:enabled>
+            </cap:create>
+            <cap:update>
+                <cap:enabled>true</cap:enabled>
+                <cap:addRemoveAttributeValues>true</cap:addRemoveAttributeValues>
+            </cap:update>
+            <cap:script>
+                <cap:enabled>true</cap:enabled>
+                <cap:host>
+                    <cap:type>connector</cap:type>
+                </cap:host>
+            </cap:script>
+            <cap:read>
+                <cap:enabled>true</cap:enabled>
+                <cap:returnDefaultAttributesOption>false</cap:returnDefaultAttributesOption>
+            </cap:read>
+            <cap:delete>
+                <cap:enabled>true</cap:enabled>
+            </cap:delete>
+        </configured>
+    </capabilities>
+    <synchronization>
+        <objectSynchronization>
+            <name>Account sync policy</name>
+            <objectClass>AccountObjectClass</objectClass>
+            <kind>account</kind>
+            <intent>default</intent>
+            <focusType>c:UserType</focusType>
+            <enabled>true</enabled>
+            <correlation>
+                <q:equal>
+                    <q:path>extension/saID</q:path>
+                    <expression>
+                        <path xmlns:ri="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3">$account/attributes/ri:saID</path>
+                    </expression>
+                </q:equal>
+            </correlation>
+            <reconcile>true</reconcile>
+            <reaction>
+                <situation>linked</situation>
+                <synchronize>true</synchronize>
+                <reconcile>false</reconcile>
+            </reaction>
+            <reaction>
+                <situation>unlinked</situation>
+                <synchronize>true</synchronize>
+                <reconcile>true</reconcile>
+                <action>
+                    <handlerUri>http://midpoint.evolveum.com/xml/ns/public/model/action-3#link</handlerUri>
+                </action>
+            </reaction>
+            <reaction>
+                <situation>unmatched</situation>
+                <synchronize>true</synchronize>
+                <reconcile>true</reconcile>
+                <action>
+                    <handlerUri>http://midpoint.evolveum.com/xml/ns/public/model/action-3#addFocus</handlerUri>
+                </action>
+            </reaction>
+            <reaction>
+                <situation>deleted</situation>
+                <synchronize>true</synchronize>
+                <reconcile>true</reconcile>
+                <action>
+                    <handlerUri>http://midpoint.evolveum.com/xml/ns/public/model/action-3#deleteShadow</handlerUri>
+                </action>
+            </reaction>
+        </objectSynchronization>
+    </synchronization>
+</resource>

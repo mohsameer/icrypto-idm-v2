@@ -1,0 +1,116 @@
+<role xmlns="http://midpoint.evolveum.com/xml/ns/public/common/common-3" xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3" xmlns:icfs="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/resource-schema-3" xmlns:org="http://midpoint.evolveum.com/xml/ns/public/common/org-3" xmlns:q="http://prism.evolveum.com/xml/ns/public/query-3" xmlns:ri="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3" xmlns:t="http://prism.evolveum.com/xml/ns/public/types-3" oid="e2c88fea-db21-11e5-80ba-d7b2f1159654" version="1">
+    <name>Edit users</name>
+    <description>
+        Role that allows to edit all users data.
+    </description>
+    <metadata>
+        <requestTimestamp>2021-05-04T07:56:26.197Z</requestTimestamp>
+        <requestorRef oid="00000000-0000-0000-0000-000000000002" relation="org:default" type="c:UserType">
+            <!-- administrator -->
+        </requestorRef>
+        <createTimestamp>2021-05-04T07:56:26.244Z</createTimestamp>
+        <creatorRef oid="00000000-0000-0000-0000-000000000002" relation="org:default" type="c:UserType">
+            <!-- administrator -->
+        </creatorRef>
+        <createChannel>http://midpoint.evolveum.com/xml/ns/public/gui/channels-3#user</createChannel>
+    </metadata>
+    <operationExecution id="14">
+        <timestamp>2021-05-04T07:56:26.277Z</timestamp>
+        <operation>
+            <objectDelta>
+                <t:changeType>add</t:changeType>
+                <t:objectType>c:RoleType</t:objectType>
+            </objectDelta>
+            <executionResult>
+                <operation>com.evolveum.midpoint.model.impl.lens.ChangeExecutor.executeDelta</operation>
+                <status>success</status>
+                <importance>normal</importance>
+                <token>1000000000000160898</token>
+            </executionResult>
+            <objectName>Edit users</objectName>
+        </operation>
+        <status>success</status>
+        <initiatorRef oid="00000000-0000-0000-0000-000000000002" relation="org:default" type="c:UserType">
+            <!-- administrator -->
+        </initiatorRef>
+        <channel>http://midpoint.evolveum.com/xml/ns/public/gui/channels-3#user</channel>
+    </operationExecution>
+    <iteration>0</iteration>
+    <iterationToken/>
+    <activation>
+        <effectiveStatus>enabled</effectiveStatus>
+        <enableTimestamp>2021-05-04T07:56:26.215Z</enableTimestamp>
+    </activation>
+    <authorization id="1">
+        <action>http://midpoint.evolveum.com/xml/ns/public/security/authorization-ui-3#usersAll</action>
+    </authorization>
+    <authorization id="2">
+        <action>http://midpoint.evolveum.com/xml/ns/public/security/authorization-model-3#add</action>
+        <object id="8">
+            <type>UserType</type>
+            <filter>
+                <q:not>
+                    <q:ref>
+                        <q:path>roleMembershipRef</q:path>
+                        <q:value>
+                            <oid>00000000-0000-0000-0000-000000000004</oid>
+                        </q:value>
+                    </q:ref>
+                </q:not>
+            </filter>
+        </object>
+    </authorization>
+    <authorization id="3">
+        <action>http://midpoint.evolveum.com/xml/ns/public/security/authorization-model-3#modify</action>
+        <object id="9">
+            <type>UserType</type>
+            <filter>
+                <q:not>
+                    <q:ref>
+                        <q:path>roleMembershipRef</q:path>
+                        <q:value>
+                            <oid>00000000-0000-0000-0000-000000000004</oid>
+                        </q:value>
+                    </q:ref>
+                </q:not>
+            </filter>
+        </object>
+    </authorization>
+    <authorization id="4">
+        <action>http://midpoint.evolveum.com/xml/ns/public/security/authorization-model-3#delete</action>
+        <object id="10">
+            <type>UserType</type>
+            <filter>
+                <q:not>
+                    <q:ref>
+                        <q:path>roleMembershipRef</q:path>
+                        <q:value>
+                            <oid>00000000-0000-0000-0000-000000000004</oid>
+                        </q:value>
+                    </q:ref>
+                </q:not>
+            </filter>
+        </object>
+    </authorization>
+    <authorization id="5">
+        <action>http://midpoint.evolveum.com/xml/ns/public/security/authorization-model-3#add</action>
+        <phase>execution</phase>
+        <object id="11">
+            <type>ShadowType</type>
+        </object>
+    </authorization>
+    <authorization id="6">
+        <action>http://midpoint.evolveum.com/xml/ns/public/security/authorization-model-3#modify</action>
+        <phase>execution</phase>
+        <object id="12">
+            <type>ShadowType</type>
+        </object>
+    </authorization>
+    <authorization id="7">
+        <action>http://midpoint.evolveum.com/xml/ns/public/security/authorization-model-3#delete</action>
+        <phase>execution</phase>
+        <object id="13">
+            <type>ShadowType</type>
+        </object>
+    </authorization>
+</role>

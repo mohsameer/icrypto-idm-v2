@@ -1,0 +1,233 @@
+<objectTemplate oid="c0c010c0-d34d-b33f-f00d-777222222334">
+    <name>Default User Template for creating profit role from iaa data</name>
+
+    <description>
+        This object is used when creating a new account to set derrived parameters(mappings).
+    </description>
+
+    <mapping>
+        <description>
+            generate profitData from template for new Member role
+        </description>
+        <strength>weak</strength>
+        <source><path>$user/extension/iaaData</path></source>
+        <source><path>$user/extension/username</path></source>
+        <expression>
+            <script>
+                <code>
+                    import org.json.JSONArray
+                    import org.json.JSONObject
+                    import org.json.JSONException
+
+                    if(iaaData != null &amp;&amp; username != null) {
+                        String template = "[\n" +
+                        "{\n" +
+                        "\"partyRoleTypeId\": 8700,\n" +
+                        "\"displayName\": \"#surname\",\n" +
+                        "\"domainRoles\": [\n" +
+                        "{\n" +
+                        "\"roleDN\": \"cn=Member,ou=Roles,dc=ppspar,DC=PPSDMN\",\n" +
+                        "\"roleName\": \"Member\",\n" +
+                        "\"name\": \"Member\"\n" +
+                        "}\n" +
+                        "],\n" +
+                        "\"roles\": [\n" +
+                        "{\n" +
+                        "\"componentRoleName\": \"IAA:Create Party Contact Point\",\n" +
+                        "\"roleDN\": \"CN=Create Party Contact Point,ou=IAA,ou=PPSApplicationroles,dc=ppspar,DC=PPSDMN\",\n" +
+                        "\"name\": \"IAA:Create Party Contact Point\",\n" +
+                        "\"roleName\": \"Create Party Contact Point\",\n" +
+                        "\"componentName\": \"IAA\"\n" +
+                        "},\n" +
+                        "{\n" +
+                        "\"componentRoleName\": \"IAA:Create Party Role\",\n" +
+                        "\"roleDN\": \"CN=Create Party Role,ou=IAA,ou=PPSApplicationroles,dc=ppspar,DC=PPSDMN\",\n" +
+                        "\"name\": \"IAA:Create Party Role\",\n" +
+                        "\"roleName\": \"Create Party Role\",\n" +
+                        "\"componentName\": \"IAA\"\n" +
+                        "},\n" +
+                        "{\n" +
+                        "\"componentRoleName\": \"IAA:Update Party Banking Detail Request\",\n" +
+                        "\"roleDN\": \"CN=Update Party Banking Detail Request,ou=IAA,ou=PPSApplicationroles,dc=ppspar,DC=PPSDMN\",\n" +
+                        "\"name\": \"IAA:Update Party Banking Detail Request\",\n" +
+                        "\"roleName\": \"Update Party Banking Detail Request\",\n" +
+                        "\"componentName\": \"IAA\"\n" +
+                        "},\n" +
+                        "{\n" +
+                        "\"componentRoleName\": \"IAA:Create Party Banking Detail Request\",\n" +
+                        "\"roleDN\": \"CN=Create Party Banking Detail Request,ou=IAA,ou=PPSApplicationroles,dc=ppspar,DC=PPSDMN\",\n" +
+                        "\"name\": \"IAA:Create Party Banking Detail Request\",\n" +
+                        "\"roleName\": \"Create Party Banking Detail Request\",\n" +
+                        "\"componentName\": \"IAA\"\n" +
+                        "},\n" +
+                        "{\n" +
+                        "\"componentRoleName\": \"IAA:Access Member Agreement\",\n" +
+                        "\"roleDN\": \"CN=Access Member Agreement,ou=IAA,ou=PPSApplicationroles,dc=ppspar,DC=PPSDMN\",\n" +
+                        "\"name\": \"IAA:Access Member Agreement\",\n" +
+                        "\"roleName\": \"Access Member Agreement\",\n" +
+                        "\"componentName\": \"IAA\"\n" +
+                        "},\n" +
+                        "{\n" +
+                        "\"componentRoleName\": \"IAA:Create Party Registration\",\n" +
+                        "\"roleDN\": \"CN=Create Party Registration,ou=IAA,ou=PPSApplicationroles,dc=ppspar,DC=PPSDMN\",\n" +
+                        "\"name\": \"IAA:Create Party Registration\",\n" +
+                        "\"roleName\": \"Create Party Registration\",\n" +
+                        "\"componentName\": \"IAA\"\n" +
+                        "},\n" +
+                        "{\n" +
+                        "\"componentRoleName\": \"IAA:Update Party Contact Point\",\n" +
+                        "\"roleDN\": \"CN=Update Party Contact Point,ou=IAA,ou=PPSApplicationroles,dc=ppspar,DC=PPSDMN\",\n" +
+                        "\"name\": \"IAA:Update Party Contact Point\",\n" +
+                        "\"roleName\": \"Update Party Contact Point\",\n" +
+                        "\"componentName\": \"IAA\"\n" +
+                        "},\n" +
+                        "{\n" +
+                        "\"componentRoleName\": \"IAA:Create Party Name\",\n" +
+                        "\"roleDN\": \"CN=Create Party Name,ou=IAA,ou=PPSApplicationroles,dc=ppspar,DC=PPSDMN\",\n" +
+                        "\"name\": \"IAA:Create Party Name\",\n" +
+                        "\"roleName\": \"Create Party Name\",\n" +
+                        "\"componentName\": \"IAA\"\n" +
+                        "},\n" +
+                        "{\n" +
+                        "\"componentRoleName\": \"IAA:Add or Modify Beneficiary Request\",\n" +
+                        "\"roleDN\": \"CN=Add or Modify Beneficiary Request,ou=IAA,ou=PPSApplicationroles,dc=ppspar,DC=PPSDMN\",\n" +
+                        "\"name\": \"IAA:Add or Modify Beneficiary Request\",\n" +
+                        "\"roleName\": \"Add or Modify Beneficiary Request\",\n" +
+                        "\"componentName\": \"IAA\"\n" +
+                        "},\n" +
+                        "{\n" +
+                        "\"componentRoleName\": \"IAA:Update Party General\",\n" +
+                        "\"roleDN\": \"CN=Update Party General,ou=IAA,ou=PPSApplicationroles,dc=ppspar,DC=PPSDMN\",\n" +
+                        "\"name\": \"IAA:Update Party General\",\n" +
+                        "\"roleName\": \"Update Party General\",\n" +
+                        "\"componentName\": \"IAA\"\n" +
+                        "},\n" +
+                        "{\n" +
+                        "\"componentRoleName\": \"IAA:Document View Member\",\n" +
+                        "\"roleDN\": \"CN=Document View Member,ou=IAA,ou=PPSApplicationroles,dc=ppspar,DC=PPSDMN\",\n" +
+                        "\"name\": \"IAA:Document View Member\",\n" +
+                        "\"roleName\": \"Document View Member\",\n" +
+                        "\"componentName\": \"IAA\"\n" +
+                        "},\n" +
+                        "{\n" +
+                        "\"componentRoleName\": \"IAA:Update Party Contact Preference\",\n" +
+                        "\"roleDN\": \"CN=Update Party Contact Preference,ou=IAA,ou=PPSApplicationroles,dc=ppspar,DC=PPSDMN\",\n" +
+                        "\"name\": \"IAA:Update Party Contact Preference\",\n" +
+                        "\"roleName\": \"Update Party Contact Preference\",\n" +
+                        "\"componentName\": \"IAA\"\n" +
+                        "},\n" +
+                        "{\n" +
+                        "\"componentRoleName\": \"IAA:Add Modify Role Player Request\",\n" +
+                        "\"roleDN\": \"CN=Add Modify Role Player Request,ou=IAA,ou=PPSApplicationroles,dc=ppspar,DC=PPSDMN\",\n" +
+                        "\"name\": \"IAA:Add Modify Role Player Request\",\n" +
+                        "\"roleName\": \"Add Modify Role Player Request\",\n" +
+                        "\"componentName\": \"IAA\"\n" +
+                        "},\n" +
+                        "{\n" +
+                        "\"componentRoleName\": \"PPS Application User\",\n" +
+                        "\"roleDN\": \"CN=PPS Application User,ou=IAA,ou=PPSApplicationroles,dc=ppspar,DC=PPSDMN\",\n" +
+                        "\"name\": \"PPS Application User\",\n" +
+                        "\"roleName\": \"PPS Application User\"\n" +
+                        "},\n" +
+                        "{\n" +
+                        "\"componentRoleName\": \"IAA:Update Party Name\",\n" +
+                        "\"roleDN\": \"CN=Update Party Name,ou=IAA,ou=PPSApplicationroles,dc=ppspar,DC=PPSDMN\",\n" +
+                        "\"name\": \"IAA:Update Party Name\",\n" +
+                        "\"roleName\": \"Update Party Name\",\n" +
+                        "\"componentName\": \"IAA\"\n" +
+                        "},\n" +
+                        "{\n" +
+                        "\"componentRoleName\": \"IAA:Create and Modify Party Request\",\n" +
+                        "\"roleDN\": \"CN=Create and Modify Party Request,ou=IAA,ou=PPSApplicationroles,dc=ppspar,DC=PPSDMN\",\n" +
+                        "\"name\": \"IAA:Create and Modify Party Request\",\n" +
+                        "\"roleName\": \"Create and Modify Party Request\",\n" +
+                        "\"componentName\": \"IAA\"\n" +
+                        "},\n" +
+                        "{\n" +
+                        "\"componentRoleName\": \"IAA:Update Party Registration\",\n" +
+                        "        \"roleDN\": \"CN=Update Party Registration,ou=IAA,ou=PPSApplicationroles,dc=ppspar,DC=PPSDMN\",\n" +
+                        "        \"name\": \"IAA:Update Party Registration\",\n" +
+                        "        \"roleName\": \"Update Party Registration\",\n" +
+                        "        \"componentName\": \"IAA\"\n" +
+                        "      },\n" +
+                        "      {\n" +
+                        "        \"componentRoleName\": \"IAA:Update Party Role\",\n" +
+                        "        \"roleDN\": \"CN=Update Party Role,ou=IAA,ou=PPSApplicationroles,dc=ppspar,DC=PPSDMN\",\n" +
+                        "        \"name\": \"IAA:Update Party Role\",\n" +
+                        "        \"roleName\": \"Update Party Role\",\n" +
+                        "        \"componentName\": \"IAA\"\n" +
+                        "      },\n" +
+                        "      {\n" +
+                        "        \"componentRoleName\": \"IAA:Quote For Insurance Old Prod Request\",\n" +
+                        "        \"roleDN\": \"CN=Quote For Insurance Old Prod Request,ou=IAA,ou=PPSApplicationroles,dc=ppspar,DC=PPSDMN\",\n" +
+                        "        \"name\": \"IAA:Quote For Insurance Old Prod Request\",\n" +
+                        "        \"roleName\": \"Quote For Insurance Old Prod Request\",\n" +
+                        "        \"componentName\": \"IAA\"\n" +
+                        "      },\n" +
+                        "      {\n" +
+                        "        \"componentRoleName\": \"IAA:Create Party Contact Preference\",\n" +
+                        "        \"roleDN\": \"CN=Create Party Contact Preference,ou=IAA,ou=PPSApplicationroles,dc=ppspar,DC=PPSDMN\",\n" +
+                        "        \"name\": \"IAA:Create Party Contact Preference\",\n" +
+                        "        \"roleName\": \"Create Party Contact Preference\",\n" +
+                        "        \"componentName\": \"IAA\"\n" +
+                        "      },\n" +
+                        "      {\n" +
+                        "        \"componentRoleName\": \"IAA:Save Party General\",\n" +
+                        "        \"roleDN\": \"CN=Save Party General,ou=IAA,ou=PPSApplicationroles,dc=ppspar,DC=PPSDMN\",\n" +
+                        "        \"name\": \"IAA:Save Party General\",\n" +
+                        "        \"roleName\": \"Save Party General\",\n" +
+                        "        \"componentName\": \"IAA\"\n" +
+                        "      }\n" +
+                        "    ],\n" +
+                        "    \"identitynumber\": \"#identityNumber\",\n" +
+                        "    \"cn\": \"#fullName\",\n" +
+                        "    \"partyRoleComponentId\": 5,\n" +
+                        "    \"lastname\": \"#surname\",\n" +
+                        "    \"uid\": \"#username\",\n" +
+                        "    \"memberno\": \"#memberNumber\",\n" +
+                        "    \"partyRoleObjectId\": #partyId,\n" +
+                        "    \"allCustomAttributeNames\": [],\n" +
+                        "    \"name\": \"#username\",\n" +
+                        "    \"sn\": \"#surname\",\n" +
+                        "    \"partyId\": \"#partyId\",\n" +
+                        "    \"partyid\": \"#partyId\",\n" +
+                        "    \"customAttributes\": {},\n" +
+                        "    \"username\": \"#username\"\n" +
+                        "  }\n" +
+                        "]";
+                        try {
+                            JSONArray array = new JSONArray(iaaData);
+                            String firstName = array.getJSONObject(0).getString("firstName");
+                            String lastName = array.getJSONObject(0).getString("lastName");
+                            String memberNumber = array.getJSONObject(0).getString("memberNumber");
+                            String encodedPartyId = array.getJSONObject(0).getString("oid");
+                            if(firstName == null || lastName == null || memberNumber == null || encodedPartyId == null) {
+                                return;
+                            }
+                            String[] encodedPartyIdChunks = encodedPartyId.split("\\.");
+                            String payload = new String(Base64.getUrlDecoder().decode(encodedPartyIdChunks[1]));
+                            String partyId = new JSONObject(payload).get("partyId").toString();
+                            if(partyId == null) return;
+                            String identityNumber = array.getJSONObject(0).getString("idNumber");
+                            if(identityNumber == null) identityNumber = array.getJSONObject(0).getString("passportNumber");
+
+                            template = template.replaceAll("#memberNumber", memberNumber);
+                            template = template.replaceAll("#partyId", partyId);
+                            template = template.replaceAll("#username", username);
+                            template = template.replaceAll("#identityNumber", identityNumber);
+                            template = template.replaceAll("#surname", lastName);
+                            template = template.replaceAll("#fullName", firstName + " " + lastName);
+
+                            return template;
+                        } catch(Exception e) {
+                            log.error("exception: " + e.getMessage())
+                        }
+                    }
+                </code>
+            </script>
+        </expression>
+        <target>
+            <path>$user/extension/profitData</path>
+        </target>
+    </mapping>
+</objectTemplate>

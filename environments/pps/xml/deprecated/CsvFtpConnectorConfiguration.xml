@@ -1,0 +1,167 @@
+<resource xmlns="http://midpoint.evolveum.com/xml/ns/public/common/common-3" xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3" xmlns:icfs="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/resource-schema-3" xmlns:org="http://midpoint.evolveum.com/xml/ns/public/common/org-3" xmlns:q="http://prism.evolveum.com/xml/ns/public/query-3" xmlns:ri="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3" xmlns:t="http://prism.evolveum.com/xml/ns/public/types-3" oid="8acd0913-073d-4faa-952f-e07e0d2b3664" version="4">
+    <name>test</name>
+    <metadata>
+        <modifyTimestamp>2022-06-06T14:43:09.465Z</modifyTimestamp>
+        <modifierRef oid="00000000-0000-0000-0000-000000000002" relation="org:default" type="c:UserType">
+            <!-- administrator -->
+        </modifierRef>
+        <modifyChannel>http://midpoint.evolveum.com/xml/ns/public/gui/channels-3#user</modifyChannel>
+    </metadata>
+    <operationExecution id="1">
+        <timestamp>2022-06-06T14:43:09.513Z</timestamp>
+        <operation>
+            <objectDelta>
+                <t:changeType>modify</t:changeType>
+                <t:objectType>c:ResourceType</t:objectType>
+            </objectDelta>
+            <executionResult>
+                <operation>com.evolveum.midpoint.model.impl.lens.ChangeExecutor.executeDelta</operation>
+                <status>success</status>
+                <importance>normal</importance>
+                <token>1000000000000000446</token>
+            </executionResult>
+            <objectName>test</objectName>
+        </operation>
+        <status>success</status>
+        <initiatorRef oid="00000000-0000-0000-0000-000000000002" relation="org:default" type="c:UserType">
+            <!-- administrator -->
+        </initiatorRef>
+        <channel>http://midpoint.evolveum.com/xml/ns/public/gui/channels-3#user</channel>
+    </operationExecution>
+    <operationExecution id="2">
+        <timestamp>2022-06-06T14:43:56.163Z</timestamp>
+        <status>success</status>
+        <initiatorRef oid="00000000-0000-0000-0000-000000000002" relation="org:default" type="c:UserType">
+            <!-- administrator -->
+        </initiatorRef>
+        <channel>http://midpoint.evolveum.com/xml/ns/public/gui/channels-3#user</channel>
+    </operationExecution>
+    <iteration>0</iteration>
+    <iterationToken/>
+    <operationalState>
+        <lastAvailabilityStatus>broken</lastAvailabilityStatus>
+    </operationalState>
+    <connectorRef type="c:ConnectorType">
+        <filter>
+            <q:equal>
+                <q:path>connectorType</q:path>
+                <q:value>com.icrypto.connector.csvftp.CsvFtpConnector</q:value>
+            </q:equal>
+        </filter>
+        <!-- ConnId com.icrypto.connector.csvftp.CsvFtpConnector v2.3 -->
+    </connectorRef>
+    <connectorConfiguration xmlns:icfc="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/connector-schema-3">
+        <icfc:configurationProperties xmlns:gen125="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/bundle/com.evolveum.polygon.connector-csv-ftp/com.icrypto.connector.csvftp.CsvFtpConnector">
+            <gen125:sftpPassword>
+                <t:encryptedData>
+                    <t:encryptionMethod>
+                        <t:algorithm>http://www.w3.org/2001/04/xmlenc#aes256-cbc</t:algorithm>
+                    </t:encryptionMethod>
+                    <t:keyInfo>
+                        <t:keyName>8tt0NYCNk0hmvoIRMtrcDXSSC7U=</t:keyName>
+                    </t:keyInfo>
+                    <t:cipherData>
+                        <t:cipherValue>ut/Ju6hQ/hehP6XwhT2g1qJSsZo4r2LQIcGSXacjoLc=</t:cipherValue>
+                    </t:cipherData>
+                </t:encryptedData>
+            </gen125:sftpPassword>
+            <gen125:ignoreEmptyLines>true</gen125:ignoreEmptyLines>
+            <gen125:headerExists>false</gen125:headerExists>
+            <gen125:sftpPort>22</gen125:sftpPort>
+            <gen125:sftpFilesBasePath>/opt/midpoint/var/tmp/</gen125:sftpFilesBasePath>
+            <gen125:filePath>/placeholder</gen125:filePath>
+            <gen125:readOnly>true</gen125:readOnly>
+            <gen125:sftpCatalogPath>/SSO PPSI</gen125:sftpCatalogPath>
+            <gen125:ignoreSurroundingSpaces>true</gen125:ignoreSurroundingSpaces>
+            <gen125:sftpZipPassword>
+                <t:encryptedData>
+                    <t:encryptionMethod>
+                        <t:algorithm>http://www.w3.org/2001/04/xmlenc#aes256-cbc</t:algorithm>
+                    </t:encryptionMethod>
+                    <t:keyInfo>
+                        <t:keyName>8tt0NYCNk0hmvoIRMtrcDXSSC7U=</t:keyName>
+                    </t:keyInfo>
+                    <t:cipherData>
+                        <t:cipherValue>LicAEFVSh/6RUyHp7vnm1K9OuWjuvo+cWXKe6hTX+lA=</t:cipherValue>
+                    </t:cipherData>
+                </t:encryptedData>
+            </gen125:sftpZipPassword>
+            <gen125:sftpUsername>singlesignon</gen125:sftpUsername>
+            <gen125:sftpHost>sftp.pps.co.za</gen125:sftpHost>
+            <gen125:nameAttribute>col0</gen125:nameAttribute>
+            <gen125:recordSeparator>\n</gen125:recordSeparator>
+            <gen125:sftpFileExpiration>25200</gen125:sftpFileExpiration>
+            <gen125:sftpEnabled>true</gen125:sftpEnabled>
+            <gen125:uniqueAttribute>col0</gen125:uniqueAttribute>
+        </icfc:configurationProperties>
+    </connectorConfiguration>
+    <schemaHandling>
+        <objectType id="5">
+            <intent>default</intent>
+            <displayName>Default Account</displayName>
+            <default>true</default>
+            <objectClass>ri:AccountObjectClass</objectClass>
+            <attribute id="6">
+                <c:ref xmlns:ri="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3">ri:col0</c:ref>
+                <displayName>saID</displayName>
+                <tolerant>true</tolerant>
+                <exclusiveStrong>false</exclusiveStrong>
+                <inbound id="8">
+                    <name>saID</name>
+                    <authoritative>false</authoritative>
+                    <exclusive>false</exclusive>
+                    <strength>normal</strength>
+                    <expression>
+                        <script xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3" xsi:type="c:ScriptExpressionEvaluatorType">
+                            <code>
+                                return input.toString().trim();
+                            </code>
+                        </script>
+                    </expression>
+                    <target>
+                        <c:path>$user/extension/saID</c:path>
+                    </target>
+                </inbound>
+            </attribute>
+        </objectType>
+    </schemaHandling>
+    <synchronization>
+        <objectSynchronization>
+            <enabled>true</enabled>
+            <correlation>
+                <q:equal xmlns="">
+                    <q:path>extension/saID</q:path>
+                    <expression xmlns="">
+                        <path xmlns:ri="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3">$projection/attributes/ri:col0</path>
+                    </expression>
+                </q:equal>
+                <q:description>Users lookup</q:description>
+            </correlation>
+            <reconcile>false</reconcile>
+            <reaction>
+                <situation>linked</situation>
+                <synchronize>true</synchronize>
+            </reaction>
+            <reaction>
+                <situation>deleted</situation>
+                <action>
+                    <handlerUri>http://midpoint.evolveum.com/xml/ns/public/model/action-3#deleteFocus</handlerUri>
+                </action>
+            </reaction>
+            <reaction>
+                <situation>unlinked</situation>
+                <reconcile>false</reconcile>
+                <action>
+                    <handlerUri>http://midpoint.evolveum.com/xml/ns/public/model/action-3#link</handlerUri>
+                </action>
+            </reaction>
+            <reaction>
+                <situation>unmatched</situation>
+                <reconcile>false</reconcile>
+                <action>
+                    <handlerUri>http://midpoint.evolveum.com/xml/ns/public/model/action-3#addFocus</handlerUri>
+                </action>
+            </reaction>
+        </objectSynchronization>
+    </synchronization>
+</resource>

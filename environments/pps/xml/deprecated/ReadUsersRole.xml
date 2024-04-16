@@ -1,0 +1,19 @@
+<role oid="e2c88fea-db21-11e5-80ba-d7b2f1155264"
+      xmlns="http://midpoint.evolveum.com/xml/ns/public/common/common-3"
+      xmlns:t="http://prism.evolveum.com/xml/ns/public/types-3"
+      xmlns:org='http://midpoint.evolveum.com/xml/ns/public/common/org-3'>
+    <!-- All roles should be combined with default role 'End user' to allow viewing gui -->
+    <name>Read all users</name>
+    <description>
+        Role that allows to read all users data.
+    </description>
+    <authorization>
+        <action>http://midpoint.evolveum.com/xml/ns/public/security/authorization-ui-3#usersAll</action>
+    </authorization>
+    <authorization>
+        <action>http://midpoint.evolveum.com/xml/ns/public/security/authorization-model-3#read</action>
+        <object>
+            <type>UserType</type>
+        </object>
+    </authorization>
+</role>

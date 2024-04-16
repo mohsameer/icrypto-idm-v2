@@ -1,0 +1,239 @@
+<resource xmlns="http://midpoint.evolveum.com/xml/ns/public/common/common-3"
+          xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3"
+          xmlns:icfs="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/resource-schema-3"
+          xmlns:org="http://midpoint.evolveum.com/xml/ns/public/common/org-3"
+          xmlns:q="http://prism.evolveum.com/xml/ns/public/query-3"
+          xmlns:ri="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3"
+          xmlns:t="http://prism.evolveum.com/xml/ns/public/types-3"
+          oid="dabfcbe2-42c2-4611-8df0-745cbb224148">
+    <name>Policy-overlay-trigger</name>
+    <description>
+        VERSION: pps.0.0.2
+        pps.0.0.2 - 26.02.2024 MKepkowski Dependency with HR-FEED
+    </description>
+    <consistency>
+        <deadShadowRetentionPeriod>PT0S</deadShadowRetentionPeriod>
+    </consistency>
+    <metadata>
+        <requestTimestamp>2023-07-28T12:58:04.959Z</requestTimestamp>
+        <requestorRef oid="00000000-0000-0000-0000-000000000002" relation="org:default" type="c:UserType">
+            <!-- administrator -->
+        </requestorRef>
+        <createTimestamp>2023-07-28T12:58:05.181Z</createTimestamp>
+        <creatorRef oid="00000000-0000-0000-0000-000000000002" relation="org:default" type="c:UserType">
+            <!-- administrator -->
+        </creatorRef>
+        <createChannel>http://midpoint.evolveum.com/xml/ns/public/gui/channels-3#user</createChannel>
+        <modifyTimestamp>2023-07-28T13:54:35.131Z</modifyTimestamp>
+        <modifierRef oid="00000000-0000-0000-0000-000000000002" relation="org:default" type="c:UserType">
+            <!-- administrator -->
+        </modifierRef>
+        <modifyChannel>http://midpoint.evolveum.com/xml/ns/public/gui/channels-3#user</modifyChannel>
+    </metadata>
+    <iteration>0</iteration>
+    <iterationToken/>
+    <operationalState>
+        <lastAvailabilityStatus>up</lastAvailabilityStatus>
+    </operationalState>
+    <connectorRef>
+        <!-- ConnId com.icrypto.connector.policyoverlay.PolicyoverlayConnector v0.0.1-SNAPSHOT -->
+        <filter>
+            <q:equal>
+                <q:path>connectorType</q:path>
+                <q:value>com.icrypto.connector.policyoverlay.PolicyoverlayConnector</q:value>
+            </q:equal>
+        </filter>
+    </connectorRef>
+    <connectorConfiguration xmlns:icfc="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/connector-schema-3">
+        <icfc:configurationProperties xmlns:gen339="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/bundle/com.evolveum.polygon.policyoverlay-connector/com.icrypto.connector.policyoverlay.PolicyoverlayConnector">
+            <gen339:healthCheckUrl>{{ with secret "secret/idm/policy-overlay-healthCheckUrl" -}}{{ .Data.value }}{{-  end }}</gen339:healthCheckUrl>
+            <gen339:policyTriggerUrl>{{ with secret "secret/idm/policy-overlay-policyTriggerUrl" -}}{{ .Data.value }}{{-  end }}</gen339:policyTriggerUrl>
+            <gen339:trustAllCertificates>true</gen339:trustAllCertificates>
+            <gen339:password>{{ with secret "secret/idm/policy-overlay-password" -}}{{ .Data.value }}{{-  end }}</gen339:password>
+            <gen339:serviceAddress>{{ with secret "secret/idm/policy-overlay-serviceAddress" -}}{{ .Data.value }}{{-  end }}</gen339:serviceAddress>
+            <gen339:username>{{ with secret "secret/idm/policy-overlay-username" -}}{{ .Data.value }}{{-  end }}</gen339:username>
+        </icfc:configurationProperties>
+    </connectorConfiguration>
+    <schema>
+        <cachingMetadata>
+            <retrievalTimestamp>2023-07-28T13:54:13.061Z</retrievalTimestamp>
+            <serialNumber>64b96538da7435e3-fadc8b23bc77a9ee</serialNumber>
+        </cachingMetadata>
+        <definition>
+            <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:a="http://prism.evolveum.com/xml/ns/public/annotation-3" xmlns:ra="http://midpoint.evolveum.com/xml/ns/public/resource/annotation-3" xmlns:tns="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3" elementFormDefault="qualified" targetNamespace="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3" xmlns:icfs="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/resource-schema-3">
+                <xsd:import namespace="http://prism.evolveum.com/xml/ns/public/annotation-3"/>
+                <xsd:import namespace="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/resource-schema-3"/>
+                <xsd:import namespace="http://midpoint.evolveum.com/xml/ns/public/resource/annotation-3"/>
+                <xsd:complexType name="AccountObjectClass">
+                    <xsd:annotation>
+                        <xsd:appinfo>
+                            <ra:resourceObject/>
+                            <ra:identifier>icfs:uid</ra:identifier>
+                            <ra:secondaryIdentifier xmlns:ri="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3">ri:icryptoUserId</ra:secondaryIdentifier>
+                            <ra:displayNameAttribute xmlns:ri="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3">ri:icryptoUserId</ra:displayNameAttribute>
+                            <ra:namingAttribute xmlns:ri="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3">ri:icryptoUserId</ra:namingAttribute>
+                            <ra:nativeObjectClass>__ACCOUNT__</ra:nativeObjectClass>
+                            <ra:kind>account</ra:kind>
+                            <ra:default>true</ra:default>
+                        </xsd:appinfo>
+                    </xsd:annotation>
+                    <xsd:sequence>
+                        <xsd:element name="enrollmentPolicyResult" type="xsd:string">
+                            <xsd:annotation>
+                                <xsd:appinfo>
+                                    <a:displayOrder>120</a:displayOrder>
+                                    <a:access>create</a:access>
+                                    <a:access>update</a:access>
+                                    <ra:frameworkAttributeName>enrollmentPolicyResult</ra:frameworkAttributeName>
+                                    <ra:returnedByDefault>false</ra:returnedByDefault>
+                                </xsd:appinfo>
+                            </xsd:annotation>
+                        </xsd:element>
+                        <xsd:element name="icryptoUserId" type="xsd:string">
+                            <xsd:annotation>
+                                <xsd:appinfo>
+                                    <a:displayOrder>110</a:displayOrder>
+                                    <a:access>create</a:access>
+                                    <a:access>update</a:access>
+                                    <ra:nativeAttributeName>icryptoUserId</ra:nativeAttributeName>
+                                    <ra:frameworkAttributeName>__NAME__</ra:frameworkAttributeName>
+                                    <ra:returnedByDefault>false</ra:returnedByDefault>
+                                </xsd:appinfo>
+                            </xsd:annotation>
+                        </xsd:element>
+                        <xsd:element name="registered" type="xsd:string">
+                            <xsd:annotation>
+                                <xsd:appinfo>
+                                    <a:displayOrder>134</a:displayOrder>
+                                    <a:access>create</a:access>
+                                    <a:access>update</a:access>
+                                    <ra:nativeAttributeName>registered</ra:nativeAttributeName>
+                                    <ra:returnedByDefault>false</ra:returnedByDefault>
+                                </xsd:appinfo>
+                            </xsd:annotation>
+                        </xsd:element>
+                        <xsd:element minOccurs="0" ref="icfs:uid">
+                            <xsd:annotation>
+                                <xsd:appinfo>
+                                    <a:displayName>ConnId UID</a:displayName>
+                                    <a:displayOrder>100</a:displayOrder>
+                                    <a:access>read</a:access>
+                                </xsd:appinfo>
+                            </xsd:annotation>
+                        </xsd:element>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:schema>
+        </definition>
+    </schema>
+    <schemaHandling>
+        <objectType id="5">
+            <kind>account</kind>
+            <default>true</default>
+            <objectClass>ri:AccountObjectClass</objectClass>
+            <attribute id="6">
+                <c:ref xmlns:ri="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3">ri:icryptoUserId</c:ref>
+                <tolerant>true</tolerant>
+                <exclusiveStrong>false</exclusiveStrong>
+                <outbound>
+                    <authoritative>true</authoritative>
+                    <exclusive>false</exclusive>
+                    <strength>normal</strength>
+                    <source>
+                        <c:path>$focus/extension/icryptoUserId</c:path>
+                    </source>
+                </outbound>
+            </attribute>
+            <attribute id="7">
+                <c:ref xmlns:ri="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3">ri:enrollmentPolicyResult</c:ref>
+                <tolerant>true</tolerant>
+                <exclusiveStrong>false</exclusiveStrong>
+                <outbound>
+                    <name>pass</name>
+                    <authoritative>true</authoritative>
+                    <exclusive>false</exclusive>
+                    <strength>strong</strength>
+                    <source>
+                        <c:path>$focus/extension/enrollmentPolicyResult</c:path>
+                    </source>
+                </outbound>
+            </attribute>
+            <attribute id="8">
+                <c:ref xmlns:ri="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3">ri:registered</c:ref>
+                <tolerant>true</tolerant>
+                <exclusiveStrong>false</exclusiveStrong>
+                <outbound>
+                    <name>pass</name>
+                    <authoritative>true</authoritative>
+                    <exclusive>false</exclusive>
+                    <strength>strong</strength>
+                    <source>
+                        <c:path>$focus/extension/registered</c:path>
+                    </source>
+                </outbound>
+            </attribute>
+            <dependency id="20">
+                <resourceRef xmlns:tns="http://midpoint.evolveum.com/xml/ns/public/common/common-3" oid="4c627e2a-01ab-4139-ba08-9d7c75a0a012" relation="org:default" type="tns:ResourceType">
+                    <!-- IdM Directory -->
+                </resourceRef>
+                <strictness>lax</strictness>
+            </dependency>
+            <dependency id="21">
+                <resourceRef xmlns:tns="http://midpoint.evolveum.com/xml/ns/public/common/common-3" oid="6d475d6b-8fa7-4fb0-b2de-f311b315339c" relation="org:default" type="tns:ResourceType">
+                    <!-- Sparkle DB -->
+                </resourceRef>
+                <strictness>lax</strictness>
+            </dependency>
+            <dependency id="22">
+                <resourceRef xmlns:tns="http://midpoint.evolveum.com/xml/ns/public/common/common-3" oid="eefb6b98-9ef8-4523-90ff-feb58563a624" relation="org:default" type="tns:ResourceType">
+                    <!-- IAA -->
+                </resourceRef>
+                <strictness>lax</strictness>
+            </dependency>
+            <dependency id="23">
+                <resourceRef xmlns:tns="http://midpoint.evolveum.com/xml/ns/public/common/common-3" oid="b3d2aa73-ba30-4a8c-986f-e0d577944484" relation="org:default" type="tns:ResourceType">
+                    <!-- PRO-FiT-DB -->
+                </resourceRef>
+                <strictness>lax</strictness>
+            </dependency>
+            <dependency id="24">
+                <resourceRef xmlns:tns="http://midpoint.evolveum.com/xml/ns/public/common/common-3" oid="b002f100-e79e-489d-8837-aa7d70dcecf3" relation="org:default" type="tns:ResourceType">
+                    <!-- HR-FEED -->
+                </resourceRef>
+                <strictness>lax</strictness>
+            </dependency>
+        </objectType>
+    </schemaHandling>
+    <capabilities>
+        <cachingMetadata>
+            <retrievalTimestamp>2023-07-24T12:49:12.651Z</retrievalTimestamp>
+            <serialNumber>1d939562956c64a-99ecfca07fbff458</serialNumber>
+        </cachingMetadata>
+        <native xmlns:cap="http://midpoint.evolveum.com/xml/ns/public/resource/capabilities-3">
+            <cap:schema/>
+            <cap:testConnection/>
+            <cap:create/>
+            <cap:update>
+                <cap:addRemoveAttributeValues>true</cap:addRemoveAttributeValues>
+            </cap:update>
+            <cap:delete/>
+            <cap:script>
+                <cap:host>
+                    <cap:type>connector</cap:type>
+                </cap:host>
+            </cap:script>
+            <cap:read>
+                <cap:returnDefaultAttributesOption>false</cap:returnDefaultAttributesOption>
+            </cap:read>
+        </native>
+    </capabilities>
+    <synchronization>
+        <objectSynchronization>
+            <objectClass>AccountObjectClass</objectClass>
+            <kind>account</kind>
+            <focusType>c:UserType</focusType>
+            <enabled>true</enabled>
+            <reconcile>false</reconcile>
+        </objectSynchronization>
+    </synchronization>
+</resource>

@@ -1,0 +1,20 @@
+<s:search xmlns:s="http://midpoint.evolveum.com/xml/ns/public/model/scripting-3"
+          xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <s:type>c:UserType</s:type>
+    <s:action>
+        <s:type>modify</s:type>
+        <parameter xmlns:t="http://prism.evolveum.com/xml/ns/public/types-3">
+            <name>delta</name>
+            <value xsi:type="t:ObjectDeltaType">
+                <t:changeType>modify</t:changeType>
+                <t:itemDelta>
+                    <t:modificationType>replace</t:modificationType>
+                    <t:path>c:extension/dataAlarms</t:path>
+                </t:itemDelta>
+            </value>
+        </parameter>
+    </s:action>
+</s:search>
+
